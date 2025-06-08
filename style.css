@@ -40,6 +40,20 @@ body {
     padding: 1rem;
 }
 
+.searchBtn {
+    padding: 1rem;
+}
+
+/* -- Header -- */
+
+.home-header {
+    background-color: black;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+
+
 /* -- Featured -- */
 
 .featured-background {
@@ -57,14 +71,14 @@ body {
     gap: 10px;
 }
 
-main {
-    padding: 10px;
-}
-
 .item-1 {
     background-color: blue;
 }
 
 .item-2 {
     background-color: red;
+}
+
+.section-1, .section-2 {
+    text-align: center;
 }
