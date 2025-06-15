@@ -5,14 +5,16 @@
 body {
     padding: 0;
     margin: 0;
+    background-color: #fffbeb;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: brown;
+    background-color: white;
     color: aliceblue;
+    padding-left: 40px;
 }
 
 .navbar-links ul {
@@ -23,25 +25,41 @@ body {
 
 .navbar-links li {
     list-style: none;
+    font-weight: bold;
 }
 
 .navbar-links a {
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 1rem;
     display: block;
 }
 
 .navbar-links a:hover {
-    background-color: black;
+    background-color: #e19132;
 }
 
 .logo {
-    padding: 1rem;
+    padding: .5rem;
+    color: black;
+    background-color: #e19132;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .searchBtn {
-    padding: 1rem;
+    padding: .5rem;
+    padding-right: 1.5rem;
+}
+
+.searchBtn > input {
+    height: 34px;
+    width: 100px;
+    padding-left: 10px;
+    background-color: #e19132;
+    border-radius: 10px;
+    border: none;
+
 }
 
 /* -- Header -- */
@@ -57,22 +75,23 @@ body {
 /* -- Featured -- */
 
 .featured-background {
-    padding: 10px;
+    padding: 30px;
 }
 
 .featured-menu {
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto;
-    padding: 10px;
-    background-color: antiquewhite;
+    padding: 20px;
+    background-color: #f9f3e2;
     text-align: center;
     gap: 10px;
+    border-radius: 10px;
 }
 
 .item {
-    height: 200px;
-    background-color: aqua;
+    height: 300px;
+    background-color: #e19132;
 }
 
 .item-1 {
@@ -88,8 +107,8 @@ body {
 }
 
 .itemz {
-    background-color: aqua;
-    height: 250px;
+    background-color: #e19132;
+    height: 350px;
 }
 
 .gallery-section {
@@ -99,6 +118,8 @@ body {
     text-align: center;
     gap: 10px;
     padding: 20px;
+    background-color: #f9f3e2;
+    border-radius: 10px;
 }
 
 .pic-1 {
@@ -131,6 +152,39 @@ body {
 
 
 footer {
-    background-color: brown;
+    background-color: #4d3419;
     height: 300px;
 }
+
+
+/* =========== Media Queries =========== */
+
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.575);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a{
+     width: 100%;
+}
+
+/*
+@media (max-width: 800px) {
+
+}
+*/
