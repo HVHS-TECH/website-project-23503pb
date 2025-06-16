@@ -8,6 +8,8 @@ body {
     background-color: #fffbeb;
 }
 
+
+/* === Navigation Bar === */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -61,6 +63,7 @@ body {
     border: none;
 
 }
+
 
 /* -- Header -- */
 
@@ -183,8 +186,57 @@ footer {
      width: 100%;
 }
 
-/*
+
+
 @media (max-width: 800px) {
+    .logo {
+        margin: .5rem;
+    }
+
+    .sidebar {
+        display: block;
+    }
+
+    .sidebar > .searchBtn > input {
+        width: 220px;
+        display: flex;
+        border: 20px;
+    }
+
+    .navbar .navbar-links > ul > li {
+        display: none;
+    }
+
+    .navbar > .searchBtn {
+        display: none;
+    }
+
+}
+
+/*
+.topnav {
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.topnav ul {
+    display: flex;
+}
+.topnav li {
+    list-style: none;
+}
+.topnav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+.logo {
+    
+}
+.search {
 
 }
 */
