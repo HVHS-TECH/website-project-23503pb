@@ -1,7 +1,14 @@
 console.log('%c script.js \n--------------------',
     'color: blue; background-color: white;');
 
-function toggleSidebar() {
-  const sidebar = document.getElementById('sidebar');
-  sidebar.classList.toggle('hidden');
+function showSideBar() {
+  console.log("Pressed")
+  
+  document.getElementById("sidebar").classList.toggle("active");
 }
+
+function hideSideBar() {
+    console.log("Pressed")
+    
+    document.getElementById("sidebar").classList.remove("active");
+  }

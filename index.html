@@ -15,37 +15,46 @@
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
     <!-- firebase end ******************************************-->
 
+    <script src="script.js"></script>
 </head>
-<body>
+
+
+<body> 
     <nav class="navbar">
         <div class="logo">Logo Here</div>
-        
+
         <div class="navbar-links">
             <ul>
-                <li><a href="index.html" href="#home">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="menu_page.html">Menu</a></li>
                 <li><a href="pathway_page.html">Career</a></li>
                 <li><a href="#">About Us</a></li>
-
-                <div class="sidebar">
-                    <div class="searchBtn">
-                        <form action="#" class="example"></form>
-                        <input type="text" placeholder="">
-                    </div>
-                    <li><a href="index.html" href="#home">Home</a></li>
-                    <li><a href="menu_page.html">Menu</a></li>
-                    <li><a href="pathway_page.html">Career</a></li>
-                    <li><a href="#">About Us</a></li>
-                </div>
             </ul>
         </div>
 
         <div class="searchBtn">
-            <form action="#" class="example"></form>
             <input type="text" placeholder="">
         </div>
-    </nav>
 
+        <div class="hamburger" style="font-weight: 900;" onclick="showSideBar()">☰</div>
+
+        <div class="sidebar" id="sidebar">
+            <div class="yesMen">
+                <div class="nm sideSearchBtn">
+                    <input type="text" placeholder="">
+                </div>
+                <div class="nm closeBtn" style="font-weight: 1000;" onclick="hideSideBar()">×</div>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu_page.html">Menu</a></li>
+                <li><a href="pathway_page.html">Career</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    
     <main>
         <div class="home-header">
             <img src="#" alt="">
@@ -64,35 +73,123 @@
             <div class="featured-background">
                 <div class="featured-menu">
                     <div class="item item-1">
-                        <p>Hello</p>
+                        <div class="hello">
+                            Hello
+                        </div>
+                        <br>
+                        <div class="itemBtn">
+                            <div class="price">
+                                <p>$0.00</p>
+                            </div>
+                            <div class="addToCart">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="item item-2">
-                        <p>Hello</p>
+                        <div class="hello">
+                            Hello
+                        </div>
+                        <br>
+                        <div class="itemBtn">
+                            <div class="price">
+                                <p>$0.00</p>
+                            </div>
+                            <div class="addToCart">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="item item-3">
-                        <p>Hello</p>
+                        <div class="hello">
+                            Hello
+                        </div>
+                        <br>
+                        <div class="itemBtn">
+                            <div class="price">
+                                <p>$0.00</p>
+                            </div>
+                            <div class="addToCart">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
                     </div>
                         
                     <div class="item item-4">
-                        <p>Hello</p>
+                        <div class="hello">
+                            Hello
+                        </div>
+                        <br>
+                        <div class="itemBtn">
+                            <div class="price">
+                                <p>$0.00</p>
+                            </div>
+                            <div class="addToCart">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="item item-5">
-                        <p>Hello</p>
+                        <div class="hello">
+                            Hello
+                        </div>
+                        <br>
+                        <div class="itemBtn">
+                            <div class="price">
+                                <p>$0.00</p>
+                            </div>
+                            <div class="addToCart">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="item item-6">
-                        <p>Hello</p>
+                        <div class="hello">
+                            Hello
+                        </div>
+                        <br>
+                        <div class="itemBtn">
+                            <div class="price">
+                                <p>$0.00</p>
+                            </div>
+                            <div class="addToCart">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="item item-7">
-                        <p>Hello</p>
+                        <div class="hello">
+                            Hello
+                        </div>
+                        <br>
+                        <div class="itemBtn">
+                            <div class="price">
+                                <p>$0.00</p>
+                            </div>
+                            <div class="addToCart">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="item item-8">
-                        <p>Hello</p>
+                        <div class="hello">
+                            Hello
+                        </div>
+                        <br>
+                        <div class="itemBtn">
+                            <div class="price">
+                                <p>$0.00</p>
+                            </div>
+                            <div class="addToCart">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
