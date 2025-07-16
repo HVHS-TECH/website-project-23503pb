@@ -6,6 +6,7 @@
     <title>Home</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
 
+
     <!-- firebase start ****************************************-->
     <!-- Firebase App (core Firebase SDK) is always required & must be listed 1st -->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>  
@@ -15,13 +16,17 @@
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
     <!-- firebase end ******************************************-->
 
+
     <script src="script.js"></script>
 </head>
 
 
-<body> 
+
+
+<body>
     <nav class="navbar">
         <div class="logo">Logo Here</div>
+
 
         <div class="navbar-links">
             <ul>
@@ -32,19 +37,23 @@
             </ul>
         </div>
 
+
         <div class="searchBtn">
             <input type="text" placeholder="">
         </div>
 
+
         <div class="hamburger" style="font-weight: 900;" onclick="showSideBar()">☰</div>
 
+
         <div class="sidebar" id="sidebar">
-            <div class="yesMen">
+            <div class="sidebar-Btns">
                 <div class="nm sideSearchBtn">
                     <input type="text" placeholder="">
                 </div>
                 <div class="nm closeBtn" style="font-weight: 1000;" onclick="hideSideBar()">×</div>
             </div>
+
 
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -54,195 +63,119 @@
             </ul>
         </div>
     </nav>
-    
+   
     <main>
         <div class="home-header">
             <img src="#" alt="">
         </div>
 
-        <div class="container-1">
-            <div class="section-1">
-                <div class="featured">
+
+        <div class="featured-menu">
+            <div class="container">
+                <div class="featured-header">
                     <h4>Featured</h4>
+                    <h1>Special Offers</h1>
+                    <p>Discover Delicious - Explore Our Menu</p>
+                </div>
+           
+
+
+                <!--products-->
+                <div class="menu-grid">
+                    <!--item 1-->
+                    <div class="product">
+                        <div class="product-image"></div>
+                        <div class="product-name">Butter Croissant</div>
+                        <div class="product-description">A buttery, flaky pastry with a crisp crust and soft, airy layers inside.</div>
+                        <div class="product-info">
+                            <p>$0.00</p>
+                            <p class="addcart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!--item 2-->
+                    <div class="product">
+                        <div class="product-image"></div>
+                        <div class="product-name">Iced Vanilla Latte</div>
+                        <div class="product-description">A chilled espresso drink with creamy milk and sweet vanilla syrup.</div>
+                        <div class="product-info">
+                            <p>$0.00</p>
+                            <p class="addcart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!--item 3-->
+                    <div class="product">
+                        <div class="product-image"></div>
+                        <div class="product-name">Avocado Toast</div>
+                        <div class="product-description">Toasted bread topped with creamy smashed avocado and light seasoning.</div>
+                        <div class="product-info">
+                            <p>$0.00</p>
+                            <p class="addcart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!--item 4-->
+                    <div class="product">
+                        <div class="product-image"></div>
+                        <div class="product-name">Macchiato</div>
+                        <div class="product-description">A shot of espresso with a dollop of foamed milk on top.</div>
+                        <div class="product-info">
+                            <p>$0.00</p>
+                            <p class="addcart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!--item 5-->
+                    <div class="product">
+                        <div class="product-image"></div>
+                        <div class="product-name">Mocha</div>
+                        <div class="product-description">Experience the delightful blend of espresso, chocolate, and steamed milk.</div>
+                        <div class="product-info">
+                            <p>$0.00</p>
+                            <p class="addcart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!--item 6-->
+                    <div class="product">
+                        <div class="product-image"></div>
+                        <div class="product-name">Latte</div>
+                        <div class="product-description">Enjoy the smooth and creamy combination of espresso and steamed milk.</div>
+                        <div class="product-info">
+                            <p>$0.00</p>
+                            <p class="addcart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!--item 7-->
+                    <div class="product">
+                        <div class="product-image"></div>
+                        <div class="product-name">Cappuccino</div>
+                        <div class="product-description">Indulge in the perfect balance of espresso, steamed milk, and a velvety layer of foam.</div>
+                        <div class="product-info">
+                            <p>$0.00</p>
+                            <p class="addcart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!--item 8-->
+                    <div class="product">
+                        <div class="product-image"></div>
+                        <div class="product-name">Espresso</div>
+                        <div class="product-description">A classic and intense coffee experience. Savor the rich flavors of our perfectly brewed espresso.</div>
+                        <div class="product-info">
+                            <p>$0.00</p>
+                            <p class="addcart">Add to cart</p>
+                        </div>
+                    </div>
                 </div>
 
-                <h1>Special Offers</h1>
-                <p>Discover Delicious - Explore Our Menu</p>
+
             </div>
+        </main>
 
-            <div class="featured-background">
-                <div class="featured-menu">
-                    <div class="item item-1">
-                        <div class="hello">
-                            Hello
-                        </div>
-                        <br>
-                        <div class="itemBtn">
-                            <div class="price">
-                                <p>$0.00</p>
-                            </div>
-                            <div class="addToCart">
-                                <p>Add to Cart</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item item-2">
-                        <div class="hello">
-                            Hello
-                        </div>
-                        <br>
-                        <div class="itemBtn">
-                            <div class="price">
-                                <p>$0.00</p>
-                            </div>
-                            <div class="addToCart">
-                                <p>Add to Cart</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item item-3">
-                        <div class="hello">
-                            Hello
-                        </div>
-                        <br>
-                        <div class="itemBtn">
-                            <div class="price">
-                                <p>$0.00</p>
-                            </div>
-                            <div class="addToCart">
-                                <p>Add to Cart</p>
-                            </div>
-                        </div>
-                    </div>
-                        
-                    <div class="item item-4">
-                        <div class="hello">
-                            Hello
-                        </div>
-                        <br>
-                        <div class="itemBtn">
-                            <div class="price">
-                                <p>$0.00</p>
-                            </div>
-                            <div class="addToCart">
-                                <p>Add to Cart</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="item item-5">
-                        <div class="hello">
-                            Hello
-                        </div>
-                        <br>
-                        <div class="itemBtn">
-                            <div class="price">
-                                <p>$0.00</p>
-                            </div>
-                            <div class="addToCart">
-                                <p>Add to Cart</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="item item-6">
-                        <div class="hello">
-                            Hello
-                        </div>
-                        <br>
-                        <div class="itemBtn">
-                            <div class="price">
-                                <p>$0.00</p>
-                            </div>
-                            <div class="addToCart">
-                                <p>Add to Cart</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item item-7">
-                        <div class="hello">
-                            Hello
-                        </div>
-                        <br>
-                        <div class="itemBtn">
-                            <div class="price">
-                                <p>$0.00</p>
-                            </div>
-                            <div class="addToCart">
-                                <p>Add to Cart</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item item-8">
-                        <div class="hello">
-                            Hello
-                        </div>
-                        <br>
-                        <div class="itemBtn">
-                            <div class="price">
-                                <p>$0.00</p>
-                            </div>
-                            <div class="addToCart">
-                                <p>Add to Cart</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="container-2">
-            <div class="section-2">
-                <h1>Gallery</h1>
-
-                <p>Sip, Savor, Snap - A Experience in Every Frame</p>
-            </div>
-
-            <div class="featured-background">
-            <div class="gallery-section">
-
-                <div class="itemz pic-1">
-                    <p>Hello</p>
-                </div>
-
-                <div class="itemz pic-2">
-                    <p>Hello</p>
-                </div>
-                        
-                <div class="itemz pic-3">
-                    <p>Hello</p>
-                </div>
-                    
-                <div class="itemz pic-4">
-                    <p>Hello</p>
-                </div>
-                    
-                <div class="itemz pic-5">
-                    <p>Hello</p>
-                </div>
-
-                <div class="itemz pic-6">
-                    <p>Hello</p>
-                </div>
-
-                <div class="itemz pic-7">
-                    <p>Hello</p>
-                </div>
-                </div>
-            </div>
-        </div>
-    </main>
 
     <footer>
         <p>Footer Here</p>
     </footer>
 </body>
 </html>
+
+
 
 
 <!--
