@@ -12,3 +12,8 @@ function hideSideBar() {
     
     document.getElementById("sidebar").classList.remove("active");
   }
+
+
+function sign_up() {
+  window.location = 'signUp_page.html';
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +10,17 @@
 
     <!-- firebase start ****************************************-->
     <!-- Firebase App (core Firebase SDK) is always required & must be listed 1st -->
-    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>  
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
     <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>  
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
     <!-- firebase end ******************************************-->
-
-
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Pages -->
     <script src="script.js"></script>
+
 </head>
 
 
@@ -38,8 +41,14 @@
         </div>
 
 
-        <div class="searchBtn">
-            <input type="text" placeholder="">
+        <div class="right-side-navbar">
+            <div class="search-icon-group">
+                <div class="search-wrap">
+                    <input type="text" placeholder="Search...">
+                    <i class="material-icons">search</i>
+                </div>
+                <i class="material-icons" onclick="sign_up()">person</i>
+            </div>
         </div>
 
 
@@ -48,10 +57,10 @@
 
         <div class="sidebar" id="sidebar">
             <div class="sidebar-Btns">
-                <div class="nm sideSearchBtn">
+                <div class="sideSearchBtn">
                     <input type="text" placeholder="">
                 </div>
-                <div class="nm closeBtn" style="font-weight: 1000;" onclick="hideSideBar()">×</div>
+                <div class="closeBtn" style="font-weight: 1000;" onclick="hideSideBar()">×</div>
             </div>
 
 
@@ -63,7 +72,7 @@
             </ul>
         </div>
     </nav>
-   
+
     <main>
         <div class="home-header">
             <img src="#" alt="">
@@ -77,8 +86,6 @@
                     <h1>Special Offers</h1>
                     <p>Discover Delicious - Explore Our Menu</p>
                 </div>
-           
-
 
                 <!--products-->
                 <div class="menu-grid">
@@ -86,7 +93,8 @@
                     <div class="product">
                         <div class="product-image"></div>
                         <div class="product-name">Butter Croissant</div>
-                        <div class="product-description">A buttery, flaky pastry with a crisp crust and soft, airy layers inside.</div>
+                        <div class="product-description">A buttery, flaky pastry with a crisp crust and soft, airy
+                            layers inside.</div>
                         <div class="product-info">
                             <p class="price">$0.00</p>
                             <p class="addcart">Add to cart</p>
@@ -96,7 +104,8 @@
                     <div class="product">
                         <div class="product-image"></div>
                         <div class="product-name">Iced Vanilla Latte</div>
-                        <div class="product-description">A chilled espresso drink with creamy milk and sweet vanilla syrup.</div>
+                        <div class="product-description">A chilled espresso drink with creamy milk and sweet vanilla
+                            syrup.</div>
                         <div class="product-info">
                             <p class="price">$0.00</p>
                             <p class="addcart">Add to cart</p>
@@ -106,7 +115,8 @@
                     <div class="product">
                         <div class="product-image"></div>
                         <div class="product-name">Avocado Toast</div>
-                        <div class="product-description">Toasted bread topped with creamy smashed avocado and light seasoning.</div>
+                        <div class="product-description">Toasted bread topped with creamy smashed avocado and light
+                            seasoning.</div>
                         <div class="product-info">
                             <p class="price">$0.00</p>
                             <p class="addcart">Add to cart</p>
@@ -126,7 +136,8 @@
                     <div class="product">
                         <div class="product-image"></div>
                         <div class="product-name">Mocha</div>
-                        <div class="product-description">Experience the delightful blend of espresso, chocolate, and steamed milk.</div>
+                        <div class="product-description">Experience the delightful blend of espresso, chocolate, and
+                            steamed milk.</div>
                         <div class="product-info">
                             <p class="price">$0.00</p>
                             <p class="addcart">Add to cart</p>
@@ -136,7 +147,8 @@
                     <div class="product">
                         <div class="product-image"></div>
                         <div class="product-name">Latte</div>
-                        <div class="product-description">Enjoy the smooth and creamy combination of espresso and steamed milk.</div>
+                        <div class="product-description">Enjoy the smooth and creamy combination of espresso and steamed
+                            milk.</div>
                         <div class="product-info">
                             <p class="price">$0.00</p>
                             <p class="addcart">Add to cart</p>
@@ -146,7 +158,8 @@
                     <div class="product">
                         <div class="product-image"></div>
                         <div class="product-name">Cappuccino</div>
-                        <div class="product-description">Indulge in the perfect balance of espresso, steamed milk, and a velvety layer of foam.</div>
+                        <div class="product-description">Indulge in the perfect balance of espresso, steamed milk, and a
+                            velvety layer of foam.</div>
                         <div class="product-info">
                             <p class="price">$0.00</p>
                             <p class="addcart">Add to cart</p>
@@ -156,7 +169,8 @@
                     <div class="product">
                         <div class="product-image"></div>
                         <div class="product-name">Espresso</div>
-                        <div class="product-description">A classic and intense coffee experience. Savor the rich flavors of our perfectly brewed espresso.</div>
+                        <div class="product-description">A classic and intense coffee experience. Savor the rich flavors
+                            of our perfectly brewed espresso.</div>
                         <div class="product-info">
                             <p class="price">$0.00</p>
                             <p class="addcart">Add to cart</p>
@@ -166,21 +180,34 @@
 
                 <div class="gallery-header">
                     <h1>Gallery</h1>
-                    <p>Discover Delicious - Explore Our Menu</p>
+                    <p>Sip, Savor, and Snap - A Experience in every frame</p>
                 </div>
             </div>
-        </main>
+
+            <div class="container">
+                <div class="gallery-grid">
+                    <!--item 1-->
+                    <div class="item item-1"></div>
+                    <!--item 2-->
+                    <div class="item item-2"></div>
+                    <!--item 3-->
+                    <div class="item item-3"></div>
+                    <!--item 4-->
+                    <div class="item item-4"></div>
+                    <!--item 5-->
+                    <div class="item item-5"></div>
+                    <!--item 6-->
+                    <div class="item item-7"></div>
+                    <!--item 7-->
+                    <div class="item item-6"></div>
+                </div>
+            </div>
+    </main>
 
 
     <footer>
         <p>Footer Here</p>
     </footer>
 </body>
+
 </html>
-
-
-
-
-<!--
- <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
--->

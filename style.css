@@ -13,6 +13,54 @@ body {
 
 
 /* =========== Navigation Bar =========== */
+
+.right-side-navbar {
+    padding-right: 1.5rem;
+}
+
+.search-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-wrap i {
+    color: black;
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+}
+
+
+
+.search-icon-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-icon-group input {
+    height: 34px;
+    width: 100px;
+    padding-left: 10px;
+    background-color: #e19132;
+    border-radius: 10px;
+    border: none;
+}
+
+.search-icon-group input::placeholder {
+    color: black;
+}
+
+.search-icon-group .material-icons {
+    font-size: 30px;
+}
+
+.search-icon-group .material-icons:hover {
+    color: #e19132;
+    cursor: pointer;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -63,7 +111,7 @@ body {
 }
 
 
-.searchBtn > input {
+.searchBtn>input {
     height: 34px;
     width: 100px;
     padding-left: 10px;
@@ -94,7 +142,8 @@ body {
 .sidebar-Btns {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* vertically center items */
+    align-items: center;
+    /* vertically center items */
     width: 100%;
 }
 
@@ -102,14 +151,17 @@ body {
 .sideSearchBtn {
     flex: 1;
     display: flex;
-    justify-content: center; /* center the input horizontally */
-    align-items: center;     /* center the input vertically */
+    justify-content: center;
+    /* center the input horizontally */
+    align-items: center;
+    /* center the input vertically */
 }
 
 
 .sideSearchBtn input {
     width: 100%;
-    max-width: 175px; /* adjust as needed */
+    max-width: 175px;
+    /* adjust as needed */
     height: 34px;
     padding-left: .5rem;
     background-color: #e19132;
@@ -163,7 +215,7 @@ body {
 
 
 .sidebar.active {
-  display: flex;
+    display: flex;
 }
 
 
@@ -181,7 +233,8 @@ body {
 
 
 
-/* =========== Featured Menu =========== */
+/* =========== Featured =========== */
+/* ===== Menu ==== */
 .featured-menu {
     background-color: #fffbeb;
     padding: 50px 0;
@@ -203,13 +256,7 @@ body {
 }
 
 
-.gallery-header {
-    text-align: center;
-    margin: 100px 0;
-}
-
-
-.featured-header > h4{
+.featured-header>h4 {
     background-color: #e19132;
     padding: 6px 16px;
     display: inline-block;
@@ -224,7 +271,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
+    grid-gap: 20px;
     padding: 60px;
     border-radius: 10px;
 }
@@ -257,15 +304,17 @@ body {
 .price {
     padding: 10px 0;
 }
+
 .addcart {
     background-color: #e19132;
     padding: 10px;
     border-radius: 10px;
 }
 
-.product-name, .product-description {
+.product-name,
+.product-description {
     padding: 0 10px;
-    
+
 }
 
 .product-name {
@@ -274,7 +323,59 @@ body {
 }
 
 
-.product-description {
+.product-description {}
+
+
+/* ==== Gallery ==== */
+.gallery-header {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.gallery-grid {
+    background-color: #f9f3e2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 60px;
+    border-radius: 10px;
+}
+
+.item {
+    height: 450px;
+    width: auto;
+    overflow: hidden;
+    background-color: blue;
+    border-radius: 10px;
+}
+
+.item-1 {
+    grid-area: 1 / 1 / 1 / span 2;
+}
+
+.item-2 {
+    grid-area: 1 / 3 / 1 / 3;
+}
+
+.item-3 {
+    grid-area: 2 / 1 / 2 / 1;
+}
+
+.item-4 {
+    grid-area: 2 / 2 / 2 / 2;
+}
+
+.item-5 {
+    grid-area: 2 / 3 / 2 / 3;
+}
+
+.item-6 {
+    grid-area: 3 / 1 / 3 / 1;
+}
+
+.item-7 {
+    grid-area: 3 / 2 / 3 / span 2;
 }
 
 
@@ -293,7 +394,7 @@ footer {
     }
 
 
-    .navbar > .hamburger {
+    .navbar>.hamburger {
         display: block;
     }
 
@@ -301,7 +402,7 @@ footer {
     .sidebar {
         display: none;
     }
-   
+
     /*
     .sidebar > ul > .searchBtn > input {
         width: 220px;
@@ -309,13 +410,13 @@ footer {
         border: 20px;
     }
     */
-   
-    .navbar .navbar-links > ul > li {
+
+    .navbar .navbar-links>ul>li {
         display: none;
     }
 
 
-    .navbar > .searchBtn {
+    .right-side-navbar {
         display: none;
     }
 
@@ -325,7 +426,7 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
     }
-   
+
 }
 
 
