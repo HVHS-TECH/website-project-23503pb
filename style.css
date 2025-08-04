@@ -31,8 +31,6 @@ body {
     pointer-events: none;
 }
 
-
-
 .search-icon-group {
     display: flex;
     align-items: center;
@@ -350,7 +348,7 @@ body {
     height: 450px;
     width: auto;
     overflow: hidden;
-    background-color: blue;
+    background-color: gray;
     border-radius: 10px;
 }
 
@@ -389,6 +387,25 @@ footer {
     height: 300px;
 }
 
+.footer-container {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.left {
+    background-color: red;
+}
+
+.center {
+    background-color: blue;
+}
+
+.right {
+    background-color: green;
+}
+
 
 /* =========== Media Queries =========== */
 /* ===== Tablet ===== */
@@ -424,6 +441,9 @@ footer {
         display: none;
     }
 
+    .sidebar > .material-icons {
+        display: none;
+    }
 
     /* ==== grid ==== */
     .menu-grid {
@@ -437,11 +457,45 @@ footer {
 /* ===== Phone ===== */
 @media (max-width: 500px) {
 
+    /* ==== navbar ==== */
+    
 
     /* ==== grid ==== */
     .menu-grid {
         grid-template-columns: 1fr;
     }
+}
 
 
+
+
+
+
+
+
+.popUp-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+.popUp-container .content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    position: relative;
+}
+
+.title {
+    background-color: white;
+}
+
+.close-btn {
+    cursor: pointer;
 }

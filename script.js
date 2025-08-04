@@ -25,6 +25,25 @@ function home_page() {
 }
 
 
+function fb_authenticator() {
+    document.getElementById('registrationPopup').style.display = 'flex';
+}
+
+function closePopup() {
+    document.getElementById('registrationPopup').style.display = 'none';
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /**************************************************************/
 // ValidationForm()
 // Validates user input fields before proceeding with registration
