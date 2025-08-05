@@ -220,41 +220,25 @@
             </div>
         </div>
 
-
-
         <div class="popUp-container" id="registrationPopup">
-            <div class="close-btn" onclick="closePopup()">×</div>
-            <div class="title">Registration</div>
-            <div class="content">
-                <form action="#">
-                    <div class="user-details">
-                        <div class="input-box">
-                            <span class="details">First name</span>
-                            <input type="text" placeholder="Enter your name" required>
-                        </div>
-                        <div class="input-box">
-                            <span class="details">Last name</span>
-                            <input type="text" placeholder="Enter your username" required>
-                        </div>
-                        <div class="input-box">
-                            <span class="details">Email</span>
-                            <input type="text" placeholder="Enter your email" required>
-                        </div>
-                        <div class="input-box">
-                            <span class="details">Phone number</span>
-                            <input type="text" placeholder="Enter your number" required>
-                        </div>
-                        <div class="input-box">
-                            <span class="details">Password</span>
-                            <input type="password" placeholder="Enter your password" required>
-                        </div>
-                        <div class="input-box">
-                            <span class="details">Confirm Password</span>
-                            <input type="password" placeholder="Confirm your password" required>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <input type="submit" value="Register">
+            <div class="popup-form">
+                <h2>Sign Up</h2>
+                <form>
+                    <label>Full Name:</label>
+                    <input type="text" required />
+            
+                    <label>Phone Number:</label>
+                    <input type="tel" required />
+            
+                    <label>Email:</label>
+                    <input type="email" required />
+            
+                    <label>Class Mentor:</label>
+                    <input type="text" required />
+            
+                    <div class="form-buttons">
+                        <button type="button" class="close-btn" onclick="closePopup()">Close</button>
+                        <button type="submit" class="submit-btn">Submit</button>
                     </div>
                 </form>
             </div>
