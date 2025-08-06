@@ -80,7 +80,7 @@ function fb_saveRegistrationInfo(user, name, number, email, mentor) {
     var data = {
         Info: {
             "Name" : name,
-            "Phone No." : number,
+            "Phone Number" : number,
             "Email" : email,
             "Mentor Class" : mentor,
         }
