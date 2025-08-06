@@ -23,7 +23,7 @@ console.log('%c fb_setup.js \n--------------------',
     messagingSenderId: "48554388587",
     appId: "1:48554388587:web:03ebd065a5d7a744e0d52e"
 };
-   
+
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   
