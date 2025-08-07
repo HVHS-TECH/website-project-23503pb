@@ -2,6 +2,24 @@ console.log('%c script.js \n--------------------',
     'color: blue; background-color: white;');
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    firebase.auth().onAuthStateChanged((user) => {
+
+        if (!document.getElementById("userIcon")) return;
+
+        if (user) {
+            if (user.photoURL) {
+                document.getElementById("userIcon").innerHTML = `
+                    <img src="${user.photoURL}" alt="Profile Picture" style="width: 32px; height: 32px; border-radius: 50%;">
+                `;
+            } else {
+                iconContainer.innerHTML = `<i class="material-icons">person</i>`;
+            }
+        }
+    });
+});
+
+
 
 function showSideBar() {
     console.log("Pressed")
@@ -83,6 +101,7 @@ function fb_saveRegistrationInfo(user, name, number, email, mentor) {
             "Phone Number" : number,
             "Email" : email,
             "Mentor Class" : mentor,
+            "PhotoURL" : user.photoURL,
         }
     };
 
