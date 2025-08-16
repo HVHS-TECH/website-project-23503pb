@@ -161,7 +161,6 @@ body {
 .sideSearchBtn input {
     width: 100%;
     max-width: 175px;
-    /* adjust as needed */
     height: 34px;
     padding-left: .5rem;
     background-color: #e19132;
@@ -296,14 +295,71 @@ body {
 
 
 .home-header {
-    background-color: black;
+    background: url('images/Hero_BannerV2.jpg') no-repeat center center/cover;
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    /*
+    background-color: #fffbeb;
     overflow: hidden;
     margin: 0;
     padding: 0;
-    height: 700px;
     max-height: 700px;
+    */
 }
 
+.hero-content {
+    color: white;
+    padding: 20px 40px 50px 40px;
+    border-radius: 10px;
+    max-width: 450px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    background-color: #e19132;
+    color: black;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #c9741e;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .home-header {
+        padding: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .home-header {
+        padding-left: 5rem;
+    }
+}
 
 
 /* =========== Featured =========== */
