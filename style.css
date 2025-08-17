@@ -422,11 +422,18 @@ body {
 
 .product-image {
     background-color: gray;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
+}
+
+.product-image img {
     width: 100%;
-    height: 180px;
-    overflow: hidden;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
 }
 
 
@@ -456,6 +463,7 @@ body {
     font-weight: bold;
     padding-bottom: 10px;
 }
+
 
 
 /* ==== Gallery ==== */
