@@ -69,6 +69,7 @@ body {
     overflow: hidden;
     top: 0;
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
 }
 
 
@@ -220,6 +221,10 @@ body {
 /* =========== Pop-up ============ */
 
 /* === Sign-Up Popup Form === */
+.popUp-container {
+    z-index: 1000;
+}
+
 .popup-form {
     display: flex;
     flex-direction: column;
@@ -300,6 +305,7 @@ body {
     height: 600px;
     display: flex;
     align-items: center;
+    z-index: 998;
     /*
     background-color: #fffbeb;
     overflow: hidden;
