@@ -300,7 +300,7 @@ body {
 
 
 .home-header {
-    background: url('images/Hero_BannerV2.jpg') no-repeat center center/cover;
+    background: url('Images/Hero_BannerV2.jpg') no-repeat center center/cover;
     position: relative;
     height: 600px;
     display: flex;
