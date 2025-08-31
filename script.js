@@ -22,14 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function showSideBar() {
-    console.log("Pressed")
-
     document.getElementById("sidebar").classList.toggle("active");
 }
 
 function hideSideBar() {
-    console.log("Pressed")
-    
     document.getElementById("sidebar").classList.remove("active");
 }
 
@@ -46,6 +42,7 @@ function closePopup() {
 }
 
 function showCartDetails() {
+    console.log("clicked")
     document.getElementById('shopping-cart').style.display = 'flex';
 }
 

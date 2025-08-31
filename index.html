@@ -7,43 +7,37 @@
     <title>Home</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
 
-
-    <!-- firebase start ****************************************-->
-    <!-- Firebase App (core Firebase SDK) is always required & must be listed 1st -->
+    <!-- Firebase start ****************************************-->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
-    <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
-    <!-- firebase end ******************************************-->
+    <!-- Firebase end ******************************************-->
+
     <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Pages -->
     <script src="script.js"></script>
     <script src="fb_setup.js"></script>
-
 </head>
 
-
-
-
 <body>
-    <nav class="navbar">
+    <nav class="nav">
         <div class="logo" onclick="home_page()">Logo Here</div>
 
-        <div class="navbar-links">
+        <div class="nav-links">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#Menu">Menu</a></li>
-                <li><a href="pathway_page.html">Career</a></li>
-                <li><a href="#Footer">About Us</a></li>
+                <li><a href="index.html"><i class="material-icons">home</i>Home</a></li>
+                <li><a href="#menu"><i class="material-icons">coffee</i>Menu</a></li>
+                <li><a href="pathway_page.html"><i class="material-icons">school</i>Career</a></li>
+                <li><a href="#footer"><i class="material-icons">info</i>About Us</a></li>
             </ul>
         </div>
 
-
-        <div class="right-side-navbar">
-            <div class="search-icon-group">
-                <div class="search-wrap">
+        <div class="nav-actions">
+            <div class="search-group">
+                <div class="search-box">
                     <input type="text" placeholder="Search...">
                     <i class="material-icons">search</i>
                 </div>
@@ -58,183 +52,198 @@
             </div>
         </div>
 
-
-        <div class="hamburger" style="font-weight: 900;" onclick="showSideBar()">☰</div>
-
+        <div class="mobile-nav">
+            <ul>
+                <li><i class="material-icons" onclick="showCartDetails()">shopping_cart</i></li>
+                <li><i class="material-icons" onclick="showSideBar()">density_medium</i></li>
+            </ul>
+        </div>
 
         <div class="sidebar" id="sidebar">
-            <div class="sidebar-Btns">
-                <div class="sideSearchBtn">
+            <div class="sidebar-header">
+                <div class="sidebar-search">
                     <input type="text" placeholder="">
                 </div>
-                <div class="closeBtn" style="font-weight: 1000;" onclick="hideSideBar()">×</div>
+                <div class="close-btn" style="font-weight: 1000;" onclick="hideSideBar()">×</div>
             </div>
 
-            <ul>
-                <li><a onclick="fb_authenticator()" style="cursor: pointer;">Sign-in</a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu_page.html">Menu</a></li>
-                <li><a href="pathway_page.html">Career</a></li>
-                <li><a href="#Footer">About Us</a></li>
-            </ul>
+            <div class="sidebar-btns">
+                <ul>
+                    <li><a onclick="fb_authenticator()" style="cursor: pointer;">
+                        <i class="material-icons">person</i>Sign-in</a>
+                    </li>
+            
+                    <li><a href="index.html">
+                        <i class="material-icons">home</i>Home</a>
+                    </li>
+            
+                    <li>
+                        <a href="#menu">
+                        <i class="material-icons">coffee</i>Menu</a>
+                    </li>
+            
+                    <li>
+                        <a href="pathway_page.html">
+                        <i class="material-icons">school</i>Career</a>
+                    </li>
+            
+                    <li>
+                        <a href="#footer">
+                        <i class="material-icons">info</i>About Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <main>
-        <header class="home-header">
+        <header class="hero">
             <div class="hero-content">
                 <h1>Welcome to HVHS Café</h1>
                 <p>Your go-to place for delicious coffee and a cozy atmosphere. Whether you're a coffee enthusiast or
                     just looking for a
                     caffeine fix, we've got you covered. Join us and experience the art of coffee-making like never
                     before!</p>
-                <a href="#Menu" class="hero-btn">Order now</a>
+                <a href="#menu" class="btn-primary">Order now</a>
             </div>
         </header>
 
-
-        <div class="featured-menu" id="Menu">
+        <section class="menu-featured" id="menu">
             <div class="container">
-                <div class="featured-header">
+                <div class="menu-header">
                     <h4>Featured</h4>
                     <h1>Special Offers</h1>
                     <p>Discover Delicious - Explore Our Menu</p>
                 </div>
 
-                <!--products-->
+                <!-- Menu items grid -->
                 <div class="menu-grid">
-                    <!--item 1-->
-                    <div class="product">
-                        <div class="product-image">
-                            <img src="Images/Menu/Croissant.jpg" alt="img">
+                    <!-- Item 1-->
+                    <div class="menu-item">
+                        <div class="menu-item-img">
+                            <img src="Images/Menu/Croissant.jpg" alt="Butter Croissant">
                         </div>
-                        <div class="product-name">Butter Croissant</div>
-                        <div class="product-description">A buttery, flaky pastry with a crisp crust and soft, airy
-                            layers inside.</div>
-                        <div class="product-info">
-                            <p class="price">$0.00</p>
-                            <p class="addcart">Add to cart</p>
+                        <div class="menu-item-name">Butter Croissant</div>
+                        <div class="menu-item-desc">A buttery, flaky pastry with a crisp crust and soft, airy layers
+                            inside.</div>
+                        <div class="menu-item-footer">
+                            <p class="item-price">$0.00</p>
+                            <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
-                    <!--item 2-->
-                    <div class="product">
-                        <div class="product-image">
+                    <!-- Item 2-->
+                    <div class="menu-item">
+                        <div class="menu-item-img">
                             <img src="Images/Menu/IcedLatte.jpg" alt="img">
                         </div>
-                        <div class="product-name">Iced Vanilla Latte</div>
-                        <div class="product-description">A chilled espresso drink with creamy milk and sweet vanilla
+                        <div class="menu-item-name">Iced Vanilla Latte</div>
+                        <div class="menu-item-desc">A chilled espresso drink with creamy milk and sweet vanilla
                             syrup.</div>
-                        <div class="product-info">
-                            <p class="price">$0.00</p>
-                            <p class="addcart">Add to cart</p>
+                        <div class="menu-item-footer">
+                            <p class="item-price">$0.00</p>
+                            <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
-                    <!--item 3-->
-                    <div class="product">
-                        <div class="product-image">
+                    <!-- Item 3-->
+                    <div class="menu-item">
+                        <div class="menu-item-img">
                             <img src="Images/Menu/AvocadoToast.jpg" alt="img">
                         </div>
-                        <div class="product-name">Avocado Toast</div>
-                        <div class="product-description">Toasted bread topped with creamy smashed avocado and light
+                        <div class="menu-item-name">Avocado Toast</div>
+                        <div class="menu-item-desc">Toasted bread topped with creamy smashed avocado and light
                             seasoning.</div>
-                        <div class="product-info">
-                            <p class="price">$0.00</p>
-                            <p class="addcart">Add to cart</p>
+                        <div class="menu-item-footer">
+                            <p class="item-price">$0.00</p>
+                            <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
-                    <!--item 4-->
-                    <div class="product">
-                        <div class="product-image">
+                    <!-- Item 4-->
+                    <div class="menu-item">
+                        <div class="menu-item-img">
                             <img src="Images/Menu/Macchiato.jpg" alt="img">
                         </div>
-                        <div class="product-name">Macchiato</div>
-                        <div class="product-description">A shot of espresso with a dollop of foamed milk on top.</div>
-                        <div class="product-info">
-                            <p class="price">$0.00</p>
-                            <p class="addcart">Add to cart</p>
+                        <div class="menu-item-name">Macchiato</div>
+                        <div class="menu-item-desc">A shot of espresso with a dollop of foamed milk on top.</div>
+                        <div class="menu-item-footer">
+                            <p class="item-price">$0.00</p>
+                            <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
-                    <!--item 5-->
-                    <div class="product">
-                        <div class="product-image">
+                    <!-- Item 5-->
+                    <div class="menu-item">
+                        <div class="menu-item-img">
                             <img src="Images/Menu/Mocha.jpg" alt="img">
                         </div>
-                        <div class="product-name">Mocha</div>
-                        <div class="product-description">Experience the delightful blend of espresso, chocolate, and
+                        <div class="menu-item-name">Mocha</div>
+                        <div class="menu-item-desc">Experience the delightful blend of espresso, chocolate, and
                             steamed milk.</div>
-                        <div class="product-info">
-                            <p class="price">$0.00</p>
-                            <p class="addcart">Add to cart</p>
+                        <div class="menu-item-footer">
+                            <p class="item-price">$0.00</p>
+                            <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
-                    <!--item 6-->
-                    <div class="product">
-                        <div class="product-image">
+                    <!-- Item 6-->
+                    <div class="menu-item">
+                        <div class="menu-item-img">
                             <img src="Images/Menu/Latte.jpg" alt="img">
                         </div>
-                        <div class="product-name">Latte</div>
-                        <div class="product-description">Enjoy the smooth and creamy combination of espresso and steamed
+                        <div class="menu-item-name">Latte</div>
+                        <div class="menu-item-desc">Enjoy the smooth and creamy combination of espresso and steamed
                             milk.</div>
-                        <div class="product-info">
-                            <p class="price">$0.00</p>
-                            <p class="addcart">Add to cart</p>
+                        <div class="menu-item-footer">
+                            <p class="item-price">$0.00</p>
+                            <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
-                    <!--item 7-->
-                    <div class="product">
-                        <div class="product-image">
+                    <!-- Item 7-->
+                    <div class="menu-item">
+                        <div class="menu-item-img">
                             <img src="Images/Menu/Capuccino.jpg" alt="img">
                         </div>
-                        <div class="product-name">Cappuccino</div>
-                        <div class="product-description">Indulge in the perfect balance of espresso, steamed milk, and a
+                        <div class="menu-item-name">Cappuccino</div>
+                        <div class="menu-item-desc">Indulge in the perfect balance of espresso, steamed milk, and a
                             velvety layer of foam.</div>
-                        <div class="product-info">
-                            <p class="price">$0.00</p>
-                            <p class="addcart">Add to cart</p>
+                        <div class="menu-item-footer">
+                            <p class="item-price">$0.00</p>
+                            <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
-                    <!--item 8-->
-                    <div class="product">
-                        <div class="product-image">
+                    <!-- Item 8-->
+                    <div class="menu-item">
+                        <div class="menu-item-img">
                             <img src="Images/Menu/Espresso.jpg" alt="img">
                         </div>
-                        <div class="product-name">Espresso</div>
-                        <div class="product-description">A classic and intense coffee experience. Savor the rich flavors
+                        <div class="menu-item-name">Espresso</div>
+                        <div class="menu-item-desc">A classic and intense coffee experience. Savor the rich flavors
                             of our perfectly brewed espresso.</div>
-                        <div class="product-info">
-                            <p class="price">$0.00</p>
-                            <p class="addcart">Add to cart</p>
+                        <div class="menu-item-footer">
+                            <p class="item-price">$0.00</p>
+                            <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="gallery-header">
                     <h1>Gallery</h1>
-                    <p>Sip, Savor, and Snap - A Experience in every frame</p>
+                    <p>Sip, Savor, and Snap - An Experience in Every Frame</p>
                 </div>
             </div>
 
             <div class="container">
                 <div class="gallery-grid">
-                    <!--item 1-->
-                    <div class="item item-1"></div>
-                    <!--item 2-->
-                    <div class="item item-2"></div>
-                    <!--item 3-->
-                    <div class="item item-3"></div>
-                    <!--item 4-->
-                    <div class="item item-4"></div>
-                    <!--item 5-->
-                    <div class="item item-5"></div>
-                    <!--item 6-->
-                    <div class="item item-7"></div>
-                    <!--item 7-->
-                    <div class="item item-6"></div>
+                    <div class="gallery-item gallery-item-1"></div>
+                    <div class="gallery-item gallery-item-2"></div>
+                    <div class="gallery-item gallery-item-3"></div>
+                    <div class="gallery-item gallery-item-4"></div>
+                    <div class="gallery-item gallery-item-5"></div>
+                    <div class="gallery-item gallery-item-6"></div>
+                    <div class="gallery-item gallery-item-7"></div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="popUp-container" id="registrationPopup">
+        <!-- Registration Popup -->
+        <div class="popup" id="registrationPopup">
             <div class="popup-form">
                 <h2>Sign Up</h2>
                 <form onsubmit="fb_write(); return false;">
@@ -250,35 +259,31 @@
                     <label>Class Mentor:</label>
                     <input type="text" id="class-mentor" required />
 
-                    <div class="form-buttons">
+                    <div class="form-actions">
                         <button type="button" class="close-btn" onclick="closePopup()">Close</button>
-                        <button type="submit" class="submit-btn">Submit</button>
+                        <button type="submit" class="btn-submit">Submit</button>
                     </div>
                 </form>
             </div>
         </div>
 
-        <div class="popUp-container" id="shopping-cart">
-            <div class="cart-details">
-
-                <div class="cart-details-header">
-                    <h1>Your cart</h1>
-
-                    <div>
-                        <i class="material-icons" onclick="close_cart()">close</i>
+        <!-- Shopping Cart Popup -->
+            <div class="cart-popup" id="shopping-cart">
+                <div class="cart-content">
+                    <div class="cart-header">
+                        <h1>Your Cart</h1>
+                        <div> <i class="material-icons" onclick="close_cart()">close</i> </div>
                     </div>
                 </div>
-
             </div>
         </div>
+
     </main>
 
-    <footer>
-        <div class="footer-container" id="Footer">
-            <div class="left">HELLO</div>
-            <div class="center">BROO?</div>
-            <div class="right">WHATT?</div>
-        </div>
+    <footer class="footer" id="footer">
+        <div class="footer-left">HELLO</div>
+        <div class="footer-center">BROO?</div>
+        <div class="footer-right">WHATT?</div>
     </footer>
 </body>
 
