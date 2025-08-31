@@ -45,7 +45,13 @@ function closePopup() {
     document.getElementById('registrationPopup').style.display = 'none';
 }
 
+function showCartDetails() {
+    document.getElementById('shopping-cart').style.display = 'flex';
+}
 
+function close_cart() {
+    document.getElementById('shopping-cart').style.display = 'none';
+}
 /* ==================================================
 ==================================================== */
 

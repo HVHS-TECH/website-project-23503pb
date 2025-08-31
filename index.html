@@ -48,6 +48,10 @@
                     <i class="material-icons">search</i>
                 </div>
 
+                <div id="cart">
+                    <i class="material-icons" onclick="showCartDetails()">shopping_cart</i>
+                </div>
+
                 <div id="userIcon">
                     <i class="material-icons" onclick="fb_authenticator()">person</i>
                 </div>
@@ -65,7 +69,7 @@
                 </div>
                 <div class="closeBtn" style="font-weight: 1000;" onclick="hideSideBar()">×</div>
             </div>
-            
+
             <ul>
                 <li><a onclick="fb_authenticator()" style="cursor: pointer;">Sign-in</a></li>
                 <li><a href="index.html">Home</a></li>
@@ -80,8 +84,10 @@
         <header class="home-header">
             <div class="hero-content">
                 <h1>Welcome to HVHS Café</h1>
-                <p>Your go-to place for delicious coffee and a cozy atmosphere. Whether you're a coffee enthusiast or just looking for a
-                caffeine fix, we've got you covered. Join us and experience the art of coffee-making like never before!</p>
+                <p>Your go-to place for delicious coffee and a cozy atmosphere. Whether you're a coffee enthusiast or
+                    just looking for a
+                    caffeine fix, we've got you covered. Join us and experience the art of coffee-making like never
+                    before!</p>
                 <a href="#Menu" class="hero-btn">Order now</a>
             </div>
         </header>
@@ -234,21 +240,35 @@
                 <form onsubmit="fb_write(); return false;">
                     <label>Full Name:</label>
                     <input type="text" id="name" required />
-            
+
                     <label>Phone Number:</label>
                     <input type="tel" id="phone-number" required />
-            
+
                     <label>Email:</label>
-                    <input type="email" id="email"  />
-            
+                    <input type="email" id="email" />
+
                     <label>Class Mentor:</label>
                     <input type="text" id="class-mentor" required />
-            
+
                     <div class="form-buttons">
                         <button type="button" class="close-btn" onclick="closePopup()">Close</button>
                         <button type="submit" class="submit-btn">Submit</button>
                     </div>
                 </form>
+            </div>
+        </div>
+
+        <div class="popUp-container" id="shopping-cart">
+            <div class="cart-details">
+
+                <div class="cart-details-header">
+                    <h1>Your cart</h1>
+
+                    <div>
+                        <i class="material-icons" onclick="close_cart()">close</i>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
