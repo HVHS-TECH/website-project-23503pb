@@ -1,5 +1,5 @@
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 body {
@@ -9,7 +9,6 @@ body {
 }
 
 /* =========== Navigation Bar =========== */
-
 /* ===== Navigation Actions ===== */
 .nav-actions {
     padding-right: 1.5rem;
@@ -53,10 +52,6 @@ body {
     cursor: pointer;
 }
 
-.search-group .material-icons:hover {
-    color: #e19132;
-}
-
 /* ===== Navbar ===== */
 .nav {
     display: flex;
@@ -95,10 +90,6 @@ body {
     font-size: 25px;
 }
 
-.nav-links a:hover {
-    background-color: #e19132;
-}
-
 /* ===== Logo ===== */
 .logo {
     padding: 0.5rem;
@@ -129,10 +120,6 @@ body {
     font-size: 25px;
     color: black;
     cursor: pointer;
-}
-
-.mobile-nav>ul>li>.material-icons:hover {
-    color: #e19132;
 }
 
 /* ===== Sidebar ===== */
@@ -200,10 +187,6 @@ body {
     font-weight: bold;
 }
 
-.sidebar-btns li:hover {
-    background-color: #e19132;
-}
-
 .sidebar-btns a {
     display: flex;
     align-items: center;
@@ -222,8 +205,9 @@ body {
     color: black;
     cursor: pointer;
 }
-/* =========== Pop-ups ============ */
 
+
+/* =========== Pop-ups ============ */
 /* ===== Popup Overlay ===== */
 .popup,
 .cart-popup {
@@ -317,6 +301,35 @@ body {
     align-items: center;
 }
 
+/* ===== Image Reference Popup ===== */
+.ref-popup {
+    display: flex;
+    background-color: yellow;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+.ref-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    padding: 20px;
+    gap: 20px;
+    background-color: orange;
+}
+.item-z,
+.item-x {
+    align-items: center;
+    text-align: center;
+}
+.item-z {
+    background-color: red;
+}
+.item-x {
+    background-color: blue;
+}
+
+
 /* =========== Hero Section =========== */
 /* ===== Hero Section ===== */
 .hero {
@@ -358,9 +371,6 @@ body {
     cursor: pointer;
 }
 
-.btn-primary:hover {
-    background-color: #c9741e;
-}
 
 /* =========== Menu Section =========== */
 /* ===== Menu Section ===== */
@@ -405,6 +415,7 @@ body {
     grid-template-rows: auto auto 1fr auto;
     background-color: #fff;
     border-radius: 10px;
+    transition: transform .3s;
 }
 
 .menu-item-img {
@@ -414,6 +425,7 @@ body {
     background-color: gray;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    cursor: pointer;
 }
 
 .menu-item-img img {
@@ -452,9 +464,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.btn-add-cart:hover {
-    background-color: #c9741e;
-}
 
 /* ===== Gallery Section ===== */
 .gallery-header {
@@ -477,9 +486,8 @@ body {
     height: 400px;
     overflow: hidden;
     background-color: gray;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-
+    border-radius: 10px;
+    transition: transform 1s;
 }
 
 .gallery-item img {
@@ -518,8 +526,8 @@ body {
     grid-area: 3 / 2 / 3 / span 2;
 }
 
-/* =========== Footer =========== */
 
+/* =========== Footer =========== */
 .footer {
     background-color: #4d3419;
     height: 300px;
@@ -540,6 +548,39 @@ body {
 .footer-right {
     background-color: green;
 }
+
+
+/* =========== Hover Effects =========== */
+.search-group .material-icons:hover {
+    color: #e19132;
+}
+
+.nav-links a:hover {
+    background-color: #e19132;
+}
+
+.mobile-nav>ul>li>.material-icons:hover {
+    color: #e19132;
+}
+
+.sidebar-btns li:hover {
+    background-color: #e19132;
+}
+
+.btn-primary:hover {
+    background-color: #c9741e;
+}
+
+.btn-add-cart:hover {
+    background-color: #c9741e;
+}
+
+.menu-item:hover,
+.gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+}
+
 
 /* =========== Media Queries =========== */
 /* ===== Large screens ===== */
