@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
 function showSideBar() {
     document.getElementById("sidebar").classList.toggle("active");
 }
@@ -49,6 +48,46 @@ function showCartDetails() {
 function close_cart() {
     document.getElementById('shopping-cart').style.display = 'none';
 }
+
+/* ==== Menu Image Reference Pop-up ====*/
+function croissant_ref_popup() {
+    document.getElementById('croissant-popup').style.display = 'flex';
+}
+function icedLatte_ref_popup() {
+    document.getElementById('icedLatte-popup').style.display = 'flex';
+}
+function avocado_ref_popup() {
+    document.getElementById('avocado-popup').style.display = 'flex';
+}
+function macchiato_ref_popup() {
+    document.getElementById('macchiato-popup').style.display = 'flex';
+}
+function mocha_ref_popup() {
+    document.getElementById('mocha-popup').style.display = 'flex';
+}
+function latte_ref_popup() {
+    document.getElementById('latte-popup').style.display = 'flex';
+}
+function capuccino_ref_popup() {
+    document.getElementById('capuccino-popup').style.display = 'flex';
+}
+function espresso_ref_popup() {
+    document.getElementById('espresso-popup').style.display = 'flex';
+}
+
+window.addEventListener('click', function(e) {
+    if (e.target.classList.contains('ref-popup')) {
+        e.target.style.display = 'none';
+    }
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === "Escape") {
+        document.querySelectorAll('.ref-popup').forEach(popup => {
+            popup.style.display = 'none';
+        });
+    }
+});
 /* ==================================================
 ==================================================== */
 

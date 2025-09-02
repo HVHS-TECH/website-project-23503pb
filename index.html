@@ -120,7 +120,7 @@
                 <div class="menu-grid">
                     <!-- Item 1-->
                     <div class="menu-item">
-                        <div class="menu-item-img">
+                        <div class="menu-item-img" onclick="croissant_ref_popup()">
                             <img src="Images/Menu/Croissant.jpg" alt="Butter Croissant">
                         </div>
                         <div class="menu-item-name">Butter Croissant</div>
@@ -133,7 +133,7 @@
                     </div>
                     <!-- Item 2-->
                     <div class="menu-item">
-                        <div class="menu-item-img">
+                        <div class="menu-item-img" onclick="icedLatte_ref_popup()">
                             <img src="Images/Menu/IcedLatte.jpg" alt="img">
                         </div>
                         <div class="menu-item-name">Iced Vanilla Latte</div>
@@ -146,7 +146,7 @@
                     </div>
                     <!-- Item 3-->
                     <div class="menu-item">
-                        <div class="menu-item-img">
+                        <div class="menu-item-img" onclick="avocado_ref_popup()">
                             <img src="Images/Menu/AvocadoToast.jpg" alt="img">
                         </div>
                         <div class="menu-item-name">Avocado Toast</div>
@@ -159,7 +159,7 @@
                     </div>
                     <!-- Item 4-->
                     <div class="menu-item">
-                        <div class="menu-item-img">
+                        <div class="menu-item-img" onclick="macchiato_ref_popup()">
                             <img src="Images/Menu/Macchiato.jpg" alt="img">
                         </div>
                         <div class="menu-item-name">Macchiato</div>
@@ -171,7 +171,7 @@
                     </div>
                     <!-- Item 5-->
                     <div class="menu-item">
-                        <div class="menu-item-img">
+                        <div class="menu-item-img" onclick="mocha_ref_popup()">
                             <img src="Images/Menu/Mocha.jpg" alt="img">
                         </div>
                         <div class="menu-item-name">Mocha</div>
@@ -184,7 +184,7 @@
                     </div>
                     <!-- Item 6-->
                     <div class="menu-item">
-                        <div class="menu-item-img">
+                        <div class="menu-item-img" onclick="latte_ref_popup()">
                             <img src="Images/Menu/Latte.jpg" alt="img">
                         </div>
                         <div class="menu-item-name">Latte</div>
@@ -197,7 +197,7 @@
                     </div>
                     <!-- Item 7-->
                     <div class="menu-item">
-                        <div class="menu-item-img">
+                        <div class="menu-item-img" onclick="capuccino_ref_popup()">
                             <img src="Images/Menu/Capuccino.jpg" alt="img">
                         </div>
                         <div class="menu-item-name">Cappuccino</div>
@@ -210,7 +210,7 @@
                     </div>
                     <!-- Item 8-->
                     <div class="menu-item">
-                        <div class="menu-item-img">
+                        <div class="menu-item-img" onclick="espresso_ref_popup()">
                             <img src="Images/Menu/Espresso.jpg" alt="img">
                         </div>
                         <div class="menu-item-name">Espresso</div>
@@ -294,6 +294,113 @@
                 <div class="cart-header">
                     <h1>Your Cart</h1>
                     <div> <i class="material-icons" onclick="close_cart()">close</i> </div>
+                </div>
+            </div>
+        </div>
+
+        <!---- Image References Popup ---->
+        <!--- Menu items --->
+        <!--Croissant-->
+        <div class="ref-popup" id="croissant-popup">
+            <div class="menu-popup-content">
+                <div class="left">
+                    <img src="Images/Menu/Croissant.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint.</p>
+                </div>
+                <div class="right">
+                    <h2>Butter Croissant</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam maiores sint voluptatum a est aliquam ducimus nobis unde illo consectetur!</p>
+                </div>
+            </div>
+        </div>
+        <!-- Iced Vanilla -->
+        <div class="ref-popup" id="icedLatte-popup">
+            <div class="menu-popup-content">
+                <div class="left">
+                    <img src="Images/Menu/IcedLatte.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint.</p>
+                </div>
+                <div class="right">
+                    <h2>Iced Vanilla Latte</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam maiores sint voluptatum a est aliquam ducimus nobis unde illo consectetur!</p>
+                </div>
+            </div>
+        </div>
+        <!--Avocado Toast-->
+        <div class="ref-popup" id="avocado-popup">
+            <div class="menu-popup-content">
+                <div class="left">
+                    <img src="Images/Menu/AvocadoToast.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint.</p>
+                </div>
+                <div class="right">
+                    <h2>Avocado Toast</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam maiores sint voluptatum a est aliquam ducimus nobis unde illo consectetur!</p>
+                </div>
+            </div>
+        </div>
+        <!--Macchiato-->
+        <div class="ref-popup" id="macchiato-popup">
+            <div class="menu-popup-content">
+                <div class="left">
+                    <img src="Images/Menu/Macchiato.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint.</p>
+                </div>
+                <div class="right">
+                    <h2>Macchiato</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam maiores sint voluptatum a est aliquam ducimus nobis unde illo consectetur!</p>
+                </div>
+            </div>
+        </div>
+        <!--Mocha-->
+        <div class="ref-popup" id="mocha-popup">
+            <div class="menu-popup-content">
+                <div class="left">
+                    <img src="Images/Menu/Mocha.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint.</p>
+                </div>
+                <div class="right">
+                    <h2>Mocha</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam maiores sint voluptatum a est aliquam ducimus nobis unde illo consectetur!</p>
+                </div>
+            </div>
+        </div>
+        <!--Latte-->
+        <div class="ref-popup" id="latte-popup">
+            <div class="menu-popup-content">
+                <div class="left">
+                    <img src="Images/Menu/Latte.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint.</p>
+                </div>
+                <div class="right">
+                    <h2>Iced Vanilla Latte</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam maiores sint voluptatum a est aliquam ducimus nobis unde illo consectetur!</p>
+                </div>
+            </div>
+        </div>
+        <!--Capuccino-->
+        <div class="ref-popup" id="capuccino-popup">
+            <div class="menu-popup-content">
+                <div class="left">
+                    <img src="Images/Menu/Capuccino.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint.</p>
+                </div>
+                <div class="right">
+                    <h2>Cappucino</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam maiores sint voluptatum a est aliquam ducimus nobis unde illo consectetur!</p>
+                </div>
+            </div>
+        </div>
+        <!--Espresso-->
+        <div class="ref-popup" id="espresso-popup">
+            <div class="menu-popup-content">
+                <div class="left">
+                    <img src="Images/Menu/Espresso.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint.</p>
+                </div>
+                <div class="right">
+                    <h2>Espresso</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam maiores sint voluptatum a est aliquam ducimus nobis unde illo consectetur!</p>
                 </div>
             </div>
         </div>
