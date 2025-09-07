@@ -74,6 +74,28 @@ function capuccino_ref_popup() {
 function espresso_ref_popup() {
     document.getElementById('espresso-popup').style.display = 'flex';
 }
+/* ======== Gallery ======== */
+function img1_ref_popup() {
+    document.getElementById('gallery-1').style.display = 'flex';
+}
+function img2_ref_popup() {
+    document.getElementById('gallery-2').style.display = 'flex';
+}
+function img3_ref_popup() {
+    document.getElementById('gallery-3').style.display = 'flex';
+}
+function img4_ref_popup() {
+    document.getElementById('gallery-4').style.display = 'flex';
+}
+function img5_ref_popup() {
+    document.getElementById('gallery-5').style.display = 'flex';
+}
+function img6_ref_popup() {
+    document.getElementById('gallery-6').style.display = 'flex';
+}
+function img7_ref_popup() {
+    document.getElementById('gallery-7').style.display = 'flex';
+}
 
 window.addEventListener('click', function(e) {
     if (e.target.classList.contains('ref-popup')) {

@@ -312,7 +312,6 @@ body {
     background: rgba(0, 0, 0, 0.6);
     z-index: 999;
 }
-
 .menu-popup-content {
     position: fixed;
     top: 50%;
@@ -327,6 +326,32 @@ body {
     width: 600px;
     max-width: 90%;
 }
+.gallery-popup-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    gap: 20px;
+    width: 600px;
+    max-width: 90%;
+}
+.gallery-img-container {
+    height: 400px;
+    width: auto;
+    overflow: hidden;
+}
+.gallery-img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top; 
+}
 .left img {
     width: 100%;
     border-radius: 10px;
@@ -336,7 +361,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 /* =========== Hero Section =========== */
 /* ===== Hero Section ===== */
 .hero {
