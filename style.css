@@ -201,7 +201,6 @@ body {
 .close-btn {
     padding: 8px 12px;
     border: none;
-    font-size: 24px;
     color: black;
     cursor: pointer;
 }
@@ -284,10 +283,12 @@ body {
 /* ===== Cart Popup ===== */
 .cart-content {
     display: flex;
+    flex-direction: column;
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 350px;
+    max-width: 700px;
+    width: 100%;
     padding: 10px 20px 30px;
     transform: translate(-50%, -50%);
     background: rgb(235, 235, 235);
@@ -299,8 +300,35 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
+
+.cart-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td,th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 5px;
+}
+.image-container img {
+    max-height: 140px;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.image-container {
+    height: 130px;
+    width: 100%;
+    border-radius: 10px;
+}
 /* ===== Image Reference Popup ===== */
 .ref-popup {
     display: none;
@@ -368,7 +396,7 @@ body {
     display: flex;
     align-items: center;
     height: 600px;
-    background: url("Images/Hero_BannerV2.jpg") no-repeat center center / cover;
+    background: url("Images/Hero_BannerV2_compressed.jpg") no-repeat center center / cover;
     z-index: 998;
 }
 
@@ -585,10 +613,14 @@ body {
 /* =========== Hover Effects =========== */
 .search-group .material-icons:hover {
     color: #e19132;
+    transition: .5s;
+    transform: scale(1.2);
 }
 
 .nav-links a:hover {
     background-color: #e19132;
+    transition: 1s;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
 }
 
 .mobile-nav>ul>li>.material-icons:hover {
