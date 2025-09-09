@@ -288,47 +288,83 @@ body {
     top: 50%;
     left: 50%;
     max-width: 700px;
-    width: 100%;
-    padding: 10px 20px 30px;
+    width: 90%;
+    max-height: 80vh;
+    padding: 20px;
     transform: translate(-50%, -50%);
-    background: rgb(235, 235, 235);
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
-
 .cart-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
 }
-
-
+.cart-header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
 .cart-footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-td,th {
-    border: 1px solid black;
-    text-align: left;
-    padding: 5px;
-}
-.image-container img {
-    max-height: 140px;
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-}
-.image-container {
-    height: 130px;
-    width: 100%;
+.cart-footer button {
+    background-color: #e19132;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
     border-radius: 10px;
 }
+.cart-orders table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-orders th {
+    background-color: #f9f9f9;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #eee;
+}
+.cart-orders td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+.cart-img-container img{
+    max-height: 80px;
+    max-width: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.cart-popup button {
+    cursor: pointer;
+}
+.cart-qty button {
+    border: none;
+    background: #eee;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 1rem;
+}
+.cart-qty button:hover {
+    background: #ddd;
+}
+.cart-footer button:hover {
+    background-color: #c9741e;
+}
+
+
+
+
 /* ===== Image Reference Popup ===== */
 .ref-popup {
     display: none;
