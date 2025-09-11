@@ -1,14 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <h1>CAREER PAGE!!</h1>
+    <title>HVHS Coffee House</title>
+    <link href="pathway.css" rel="stylesheet" type="text/css" />
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/Emoji Favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/Emoji Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/Emoji Favicon/favicon-16x16.png">
+
+    <!-- Firebase start ****************************************-->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+    <!-- Firebase end ******************************************-->
+
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Pages -->
+    <script src="script.js"></script>
+    <script src="fb_setup.js"></script>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="logo" onclick="home_page()">
+            <img src="Images/Logo.png" alt="HVHS coffee shop">
+            <p>HVHS Coffee Shop</p>
+        </div>
+
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html"><i class="material-icons">home</i>Home</a></li>
+                <li><a href="#menu"><i class="material-icons">coffee</i>Menu</a></li>
+                <li><a href="pathway_page.html"><i class="material-icons">school</i>Career</a></li>
+                <li><a href="#footer"><i class="material-icons">info</i>About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-actions">
+            <div class="search-group">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <i class="material-icons">search</i>
+                </div>
+
+                <div id="cart">
+                    <i class="material-icons" onclick="showCartDetails()">shopping_cart</i>
+                </div>
+
+                <div id="userIcon">
+                    <i class="material-icons" onclick="fb_authenticator()">person</i>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-nav">
+            <ul>
+                <li><i class="material-icons" onclick="showCartDetails()">shopping_cart</i></li>
+                <li><i class="material-icons" onclick="showSideBar()">density_medium</i></li>
+            </ul>
+        </div>
+
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-search">
+                    <input type="text" placeholder="">
+                </div>
+                <div class="close-btn" style="font-weight: 1000;" onclick="hideSideBar()">×</div>
+            </div>
+
+            <div class="sidebar-btns">
+                <ul>
+                    <li><a onclick="fb_authenticator()" style="cursor: pointer;">
+                        <i class="material-icons">person</i>Sign-in</a>
+                    </li>
+            
+                    <li><a href="index.html">
+                        <i class="material-icons">home</i>Home</a>
+                    </li>
+            
+                    <li>
+                        <a href="#menu">
+                        <i class="material-icons">coffee</i>Menu</a>
+                    </li>
+            
+                    <li>
+                        <a href="pathway_page.html">
+                        <i class="material-icons">school</i>Career</a>
+                    </li>
+            
+                    <li>
+                        <a href="#footer">
+                        <i class="material-icons">info</i>About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header>
+            <h1>Join Our Cafe Team</h1>
+            <p>Learn how to be a certified barista</p>
+        </header>
+
+        <!-- Left -->
+        <div class="form-grid">
+            <div class="career-info">
+                <h2>Education</h2>
+                <div class="education-details">
+                    <p>Interested in learning the art of being a barista? Our education page provides all 
+                        the information you need to know about our training program. Our program is designed 
+                        to give students hands-on experience in coffee-making and customer service.
+                    </p>
+
+                    <p>To qualify as a barista, students are required to complete a certain number of volunteer 
+                        hours at our coffee shop. These hours provide valuable practical experience and help 
+                        students develop their skills. The exact number of volunteer hours required may vary 
+                        depending on the level of proficiency desired.
+                    </p>
+
+                    <p>Join our training program and unlock the secrets of being a skilled barista. Gain the 
+                        knowledge and experience needed to excel in the world of coffee-making.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right -->
+            <div class="form">
+                <section class="career-section">
+                    <h2>Barista Training Application</h2>
+                    <p>Fill out this form if you’re a junior or senior high school student who wants to learn coffee-making skills and join our café team.</p>
+
+                    <form>
+                    <div>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div>
+                        <label for="grade">Grade Level</label>
+                        <select id="grade" required>
+                        <option value="">-- Select your grade --</option>
+                        <option value="junior">Junior High School</option>
+                        <option value="senior">Senior High School</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="email">School Email</label>
+                        <input type="email" id="email" placeholder="example@school.edu" required>
+                    </div>
+
+                    <div>
+                        <label for="interest">Why do you want to join?</label>
+                        <textarea id="interest" placeholder="Tell us why you want to learn barista skills..." required></textarea>
+                    </div>
+
+                    <div>
+                        <label for="availability">Availability</label>
+                        <select id="availability" required>
+                        <option value="">-- Choose your availability --</option>
+                        <option value="morning">Morning Break</option>
+                        <option value="lunch">Lunch Time</option>
+                        <option value="after-school">After School</option>
+                        </select>
+                    </div>
+
+                    <button type="submit">Submit Application</button>
+                    </form>
+
+                    <p class="note">📌 Note: Applications are open only to Junior & Senior High School students of our school.</p>
+                </section>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Registration Popup -->
+        <div class="popup" id="registrationPopup">
+            <div class="popup-form">
+                <h2>Sign Up</h2>
+                <form onsubmit="fb_write(); return false;">
+                    <label>Full Name:</label>
+                    <input type="text" id="name" required />
+
+                    <label>Phone Number:</label>
+                    <input type="tel" id="phone-number" required />
+
+                    <label>Email:</label>
+                    <input type="email" id="email" />
+
+                    <label>Class Mentor:</label>
+                    <input type="text" id="class-mentor" required />
+
+                    <div class="form-actions">
+                        <button type="button" class="close-btn" onclick="closePopup()">Close</button>
+                        <button type="submit" class="btn-submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Shopping Cart Popup -->
+        <div class="cart-popup" id="shopping-cart">
+            <div class="cart-content">
+
+                <!-- header -->
+                <div class="cart-header">
+                    <h1>Your Cart</h1>
+                    <div class="close-btn" style="font-weight: 1000; font-size: 40px;" onclick="close_cart()">×</div>
+                </div>
+
+                <!-- items -->
+                <div class="cart-items">
+                    <!-- item 1 -->
+                    <div class="cart-item">
+                        <img src="Images/Menu/Latte.jpg" alt="Latte">
+                        <div class="cart-item-details">
+                            <h3>Latte</h3>
+                            <div class="quantity-control">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-item-price">$10.00</div>
+                    </div>
+                    <!-- item 2 -->
+                    <div class="cart-item">
+                        <img src="Images/Menu/Croissant.jpg" alt="Croissant">
+                        <div class="cart-item-details">
+                            <h3>Croissant</h3>
+                            <div class="quantity-control">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-item-price">$10.00</div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="cart-item">
+                        <img src="Images/Menu/AvocadoToast.jpg" alt="Avocado Toast">
+                        <div class="cart-item-details">
+                            <h3>Latte</h3>
+                            <div class="quantity-control">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-item-price">$10.00</div>
+                    </div>
+                    <!-- item 4 -->
+                    <div class="cart-item">
+                        <img src="Images/Menu/Mocha.jpg" alt="Mocha">
+                        <div class="cart-item-details">
+                            <h3>Mocha</h3>
+                            <div class="quantity-control">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-item-price">$10.00</div>
+                    </div>
+                    
+                </div>
+
+                <div class="cart-footer">
+                    <h2>Total: $100.00</h2>
+                    <button>Checkout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- =========== Footer =========== -->
+    <footer class="footer" id="footer">
+        <!-- Column 1 -->
+        <div class="footer-col column-1">
+            <div class="footer-logo">
+                <img src="Images/Logo.png" alt="Logo">
+            </div>
+            <div class="socials">
+                <a href="#"><img src="Images/SNS icons/instagram.png" alt="Facebook"></a>
+                <a href="#"><img src="Images/SNS icons/facebook.png" alt="Twitter"></a>
+                <a href="#"><img src="Images/SNS icons/tiktok.png" alt="Instagram"></a>
+            </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-col column-2">
+            <h2>Contact Us</h2>
+            <div class="yipyip">
+                <i class="material-icons">mail</i>
+                <p>office@hvhs.school.nz</p>
+            </div>
+            <div class="yipyip">
+                <i class="material-icons">call</i>
+                <p>04-566-4584</p>
+            </div>
+            <div class="yipyip">
+                <i class="material-icons">location_on</i>
+                <p>84-114 Woburn Road, Woburn, Lower Hutt 5010</p>
+            </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col column-3">
+            <div class="aboutUs">
+                <h2>About Us</h2>
+                <p>At HVHS Coffee Shop, we’re all about great coffee and good vibes to start your day right. 
+                    We also help students learn barista skills, so you can sip, smile, and maybe even join the team!
+                </p>
+            </div>
+            <div class="KeepUpdated">
+                <h3>Keep Updated</h3>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
 
 </body>
+
 </html>
