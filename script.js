@@ -1,6 +1,18 @@
 console.log('%c script.js \n--------------------',
     'color: blue; background-color: white;');
 
+document.addEventListener("click", function(e) {
+    if (e.target.classList.contains("plus")) {
+        let input = e.target.previousElementSibling;
+        input.value = parseInt(input.value) + 1;
+    }
+    if (e.target.classList.contains("minus")) {
+        let input = e.target.nextElementSibling;
+        if (parseInt(input.value) > 1) {
+            input.value = parseInt(input.value) - 1;
+        }
+    }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     firebase.auth().onAuthStateChanged((user) => {

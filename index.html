@@ -291,80 +291,68 @@
         <!-- Shopping Cart Popup -->
         <div class="cart-popup" id="shopping-cart">
             <div class="cart-content">
+
+                <!-- header -->
                 <div class="cart-header">
                     <h1>Your Cart</h1>
                     <div class="close-btn" style="font-weight: 1000; font-size: 40px;" onclick="close_cart()">×</div>
                 </div>
 
-                <div class="cart-orders">
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th>Product Name</th>
-                            <th>Qty.</th>
-                            <th>Sub total</th>
-                        </tr>
-                        <!-- Item 1 -->
-                        <tr>
-                            <td>
-                                <div class="cart-img-container">
-                                    <img src="Images/Menu/Espresso.jpg" alt="">
-                                </div>
-                            </td>
-                            <td>Espresso</td>
-                            <td class="cart-qty">
-                                <button>-</button>
-                                <span>4</span>
-                                <button>+</button>
-                            </td>
-                            <td>$10.00</td>
-                        </tr>
-                        <!-- Item 2-->
-                        <tr>
-                            <td>
-                                <div class="cart-img-container">
-                                    <img src="Images/Menu/AvocadoToast.jpg" alt="">
-                                </div>
-                            </td>
-                            <td>Avocado Toast</td>
-                            <td class="cart-qty">
-                                <button>-</button>
-                                <span>4</span>
-                                <button>+</button>
-                            </td>
-                            <td>$10.00</td>
-                        </tr>
-                        <!-- Item 3 -->
-                        <tr>
-                            <td>
-                                <div class="cart-img-container">
-                                    <img src="Images/Menu/IcedLatte.jpg" alt="">
-                                </div>
-                            </td>
-                            <td>Iced Vanilla Latte</td>
-                            <td class="cart-qty">
-                                <button>-</button>
-                                <span>4</span>
-                                <button>+</button>
-                            </td>
-                            <td>$10.00</td>
-                        </tr>
-                        <!-- Item 4 -->
-                        <tr>
-                            <td>
-                                <div class="cart-img-container">
-                                    <img src="Images/Menu/Croissant.jpg" alt="">
-                                </div>
-                            </td>
-                            <td>Espresso</td>
-                            <td class="cart-qty">
-                                <button>-</button>
-                                <span>4</span>
-                                <button>+</button>
-                            </td>
-                            <td>$10.00</td>
-                        </tr>
-                    </table>
+                <!-- items -->
+                <div class="cart-items">
+                    <!-- item 1 -->
+                    <div class="cart-item">
+                        <img src="Images/Menu/Latte.jpg" alt="Latte">
+                        <div class="cart-item-details">
+                            <h3>Latte</h3>
+                            <div class="quantity-control">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-item-price">$10.00</div>
+                    </div>
+                    <!-- item 2 -->
+                     <div class="cart-item">
+                        <img src="Images/Menu/Croissant.jpg" alt="Croissant">
+                        <div class="cart-item-details">
+                            <h3>Croissant</h3>
+                            <div class="quantity-control">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-item-price">$10.00</div>
+                    </div>
+                    <!-- item 3 -->
+                     <div class="cart-item">
+                        <img src="Images/Menu/AvocadoToast.jpg" alt="Avocado Toast">
+                        <div class="cart-item-details">
+                            <h3>Latte</h3>
+                            <div class="quantity-control">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-item-price">$10.00</div>
+                    </div>
+                    <!-- item 4 -->
+                     <div class="cart-item">
+                        <img src="Images/Menu/Mocha.jpg" alt="Mocha">
+                        <div class="cart-item-details">
+                            <h3>Mocha</h3>
+                            <div class="quantity-control">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-item-price">$10.00</div>
+                    </div>
+                    
                 </div>
 
                 <div class="cart-footer">
