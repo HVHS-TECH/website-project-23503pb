@@ -647,23 +647,37 @@ body {
 
 /* =========== Footer =========== */
 .footer {
-    background-color: #4d3419;
-    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    background-color: #222;
+    padding: 1rem;
+}
+.footer-col {
     display: flex;
-    justify-content: space-between;
-    color: white;
-    padding: 2rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+.logo {
+    background-color: #fff;
+}
+.logo img {
+    width: 200px;
+    margin-bottom: 1rem;
+}
+.socials a img {
+    width: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s;
 }
 
-.footer-left {
-    background-color: red;
+.column-1 {
+    background-color: pink;
 }
-
-.footer-center {
+.column-2 {
     background-color: blue;
 }
-
-.footer-right {
+.column-3 {
     background-color: green;
 }
 
