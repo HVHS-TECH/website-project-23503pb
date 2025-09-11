@@ -685,6 +685,7 @@ body {
 .column-1{
     display: flex;
     background-color: rgb(172, 172, 172);
+    border-radius: 10px;
 }
 .footer-logo {
     display: flex;
@@ -745,12 +746,9 @@ body {
     transition: background 0.3s;
 }
 
-
-
-
-
 .column-3 {
     background-color: rgba(128, 128, 128, 0.253);
+    border-radius: 10px;
 }
 
 

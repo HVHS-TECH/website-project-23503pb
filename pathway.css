@@ -9,7 +9,7 @@ html {
 body {
     padding: 0;
     margin: 0;
-    background-color: goldenrod;
+    background-color: #fffbeb;
 }
 
 
@@ -36,7 +36,7 @@ header p {
 .form-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 1rem 2rem;
+    padding: 5rem 2rem;
     gap: 1.2rem;
     max-width: 1400px;
     margin: auto;
@@ -44,9 +44,10 @@ header p {
 
 /* -- Left -- */
 .career-info {
-    background: blue;
+    background: #f9f3e2;
     padding: 1.5rem;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .career-info h2{
@@ -63,9 +64,10 @@ header p {
     display: flex;
 }
 .career-section {
-    background-color: yellow;
+    background-color: #f9f3e2;
     padding: 1.5rem;
     border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .career-section h2 {
     text-align: center;
@@ -343,6 +345,7 @@ button {
 .column-1 {
     display: flex;
     background-color: rgb(172, 172, 172);
+    border-radius: 10px;
 }
 
 .footer-logo {
@@ -392,6 +395,7 @@ button {
 /* -- footer column 3 -- */
 .column-3 {
     background-color: rgba(128, 128, 128, 0.253);
+    border-radius: 10px;
 }
 
 .subscribe-form {
@@ -672,7 +676,20 @@ button {
     }
 }
 
+@media (max-width: 900px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+        max-width: 100%;
+        /* full width on mobile */
+    }
 
+    .career-info,
+    .career-section {
+        padding: 1.2rem;
+    }
+}
 
 
 
