@@ -211,20 +211,7 @@ function fb_application_val() {
 function fb_application(name, email, interest, availability) {
     console.log("fb_application() working...")
 
-    firebase.auth().onAuthStateChanged((user) => {
-        if (user) {
-            console.log("logged in", user);
-            fb_saveApplicationInfo(user, name, email, interest, availability);
-        } else {
-            console.log("Not logged in");
-            var provider = new firebase.auth.GoogleAuthProvider();
-
-            firebase.auth().signInWithPopup(provider).then(function(result) {
-                var user = result.user;
-                fb_saveApplicationInfo(user, name, email, interest, availability);
-            });
-        }
-    });
+    fb_saveApplicationInfo(user, name, email, interest, availability);
 }
 
 function fb_saveApplicationInfo(user, name, email, interest, availability) {
