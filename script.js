@@ -232,7 +232,7 @@ function fb_saveApplicationInfo(user, name, email, interest, availability) {
 
     var uid = user.uid;
     var data = {
-        Application: {
+        "User Details": {
             "Name": name,
             "Email": email,
             "Interest": interest,
@@ -243,10 +243,10 @@ function fb_saveApplicationInfo(user, name, email, interest, availability) {
 
     console.log(uid, data);
 
-    firebase.database().ref('applications/' + uid).set(data)
+    firebase.database().ref('applications/users/' + uid).set(data)
     .then(function() {
         alert("Application submitted successfully!");
-        document.getElementById("baristaForm").reset();
+        document.getElementById("application-form").reset();
     })
         .catch(function(error) {
         alert("Error: " + error.message);
