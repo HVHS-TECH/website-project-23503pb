@@ -211,7 +211,13 @@ function fb_application_val() {
 function fb_application(name, email, interest, availability) {
     console.log("fb_application() working...")
 
-    fb_saveApplicationInfo(user, name, email, interest, availability);
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            fb_saveApplicationInfo(user, name, email, interest, availability);
+        } else {
+            alert("Please log in before submitting an application.");
+        }
+    });
 }
 
 function fb_saveApplicationInfo(user, name, email, interest, availability) {
@@ -223,19 +229,17 @@ function fb_saveApplicationInfo(user, name, email, interest, availability) {
             "Name": name,
             "Email": email,
             "Interest": interest,
-            "Availability": availability,
-            "PhotoURL": user.photoURL
+            "Availability": availability
         }
     };
 
     console.log(uid, data);
 
-    firebase.database().ref('applications/users/' + uid).set(data)
-    .then(function() {
-        alert("Application submitted successfully!");
+    firebase.database().ref('applications/users' + uid).set(data)
+    .then(() => {
         document.getElementById("application-form").reset();
     })
-        .catch(function(error) {
+    .catch((error) => {
         alert("Error: " + error.message);
     });
 }
