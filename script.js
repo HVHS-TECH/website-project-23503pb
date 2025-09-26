@@ -235,7 +235,7 @@ function fb_saveApplicationInfo(user, name, email, interest, availability) {
 
     console.log(uid, data);
 
-    firebase.database().ref('applications/users' + uid).set(data)
+    firebase.database().ref('applications/users/' + uid).set(data)
     .then(() => {
         document.getElementById("application-form").reset();
     })
