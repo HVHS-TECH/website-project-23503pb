@@ -195,3 +195,60 @@ function fb_saveRegistrationInfo(user, name, number, email, mentor) {
 
 
 
+function fb_application_val() {
+    console.log("fb_application_val() working...")
+        
+    const name = document.getElementById("application-name").value;
+    const email = document.getElementById("application-email").value;
+    const interest = document.getElementById("application-interest").value;
+    const availability = document.getElementById("application-availability").value;
+
+    console.log(name, email, interest, availability);
+
+    fb_application(name, email, interest, availability);
+}
+
+function fb_application(name, email, interest, availability) {
+    console.log("fb_application() working...")
+
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            console.log("logged in", user);
+            fb_saveApplicationInfo(user, name, email, interest, availability);
+        } else {
+            console.log("Not logged in");
+            var provider = new firebase.auth.GoogleAuthProvider();
+
+            firebase.auth().signInWithPopup(provider).then(function(result) {
+                var user = result.user;
+                fb_saveApplicationInfo(user, name, email, interest, availability);
+            });
+        }
+    });
+}
+
+function fb_saveApplicationInfo(user, name, email, interest, availability) {
+    console.log("fb_saveApplicationInfo() working...");
+
+    var uid = user.uid;
+    var data = {
+        Application: {
+            "Name": name,
+            "Email": email,
+            "Interest": interest,
+            "Availability": availability,
+            "PhotoURL": user.photoURL
+        }
+    };
+
+    console.log(uid, data);
+
+    firebase.database().ref('applications/' + uid).set(data)
+    .then(function() {
+        alert("Application submitted successfully!");
+        document.getElementById("baristaForm").reset();
+    })
+        .catch(function(error) {
+        alert("Error: " + error.message);
+    });
+}
