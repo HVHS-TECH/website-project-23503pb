@@ -192,9 +192,6 @@ function fb_saveRegistrationInfo(user, name, number, email, mentor) {
 }
 
 
-
-
-
 function fb_application_val() {
     console.log("fb_application_val() working...")
         
@@ -245,18 +242,27 @@ function fb_saveApplicationInfo(user, name, email, interest, availability) {
 }
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
-  let cartCount = 0;
-  const cartCountElement = document.getElementById("cart-count");
+    let cartCount = 0;
+    const cartCountDesktop = document.getElementById("cart-count");
+    const cartCountMobile = document.getElementById("cart-count-mobile");
 
-  const addToCartButtons = document.querySelectorAll(".btn-add-cart");
+    const addToCartButtons = document.querySelectorAll(".btn-add-cart");
 
-  addToCartButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      cartCount++;
-      cartCountElement.textContent = cartCount;
-      cartCountElement.style.display = "inline"; // show badge once > 0
+    function updateCartCount() {
+        cartCountDesktop.textContent = cartCount;
+        cartCountMobile.textContent = cartCount;
+
+        if (cartCount > 0) {
+        cartCountDesktop.style.display = "inline";
+        cartCountMobile.style.display = "inline";
+        }
+    }
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener("click", () => {
+        cartCount++;
+        updateCartCount();
+        });
     });
-  });
 });
