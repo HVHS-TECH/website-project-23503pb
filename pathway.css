@@ -78,17 +78,17 @@ header p {
 }
 
 /* form inputs */
-form {
+.career-section form {
     display: grid;
     gap: .8rem;
 }
-label {
+.career-section label {
     display: block;
     font-weight: 600;
 }
-input,
-select,
-textarea {
+.career-section input,
+.career-section select,
+.career-section textarea {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #ccc;
@@ -98,7 +98,7 @@ textarea {
     box-sizing: border-box;
 }
 /* Button */
-button {
+.career-section button {
     background: #6f4e37;
     color: white;
     border: none;
