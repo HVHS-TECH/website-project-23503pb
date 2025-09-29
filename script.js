@@ -1,6 +1,8 @@
 console.log('%c script.js \n--------------------',
     'color: blue; background-color: white;');
 
+
+
 document.addEventListener("click", function(e) {
     if (e.target.classList.contains("plus")) {
         let input = e.target.previousElementSibling;
@@ -15,23 +17,71 @@ document.addEventListener("click", function(e) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+    // -------------------------------
+    //  Firebase Auth UI Handling
+    // -------------------------------
     firebase.auth().onAuthStateChanged((user) => {
-
-        if (!document.getElementById("userIcon")) return;
+        const sidebar_userIcon = document.getElementById("sidebar-userIcon");
+        const userIcon = document.getElementById("userIcon");
 
         if (user) {
-            if (user.photoURL) {
-                document.getElementById("userIcon").innerHTML = `
-                    <img src="${user.photoURL}" alt="Profile Picture" style="width: 32px; height: 32px; border-radius: 50%;">
+            if (sidebar_userIcon) {
+                sidebar_userIcon.innerHTML = `
+                    <img src="${user.photoURL}" alt="User"
+                        style="width:24px; height:24px; border-radius:50%; vertical-align:middle; margin-right:6px;">
+                    ${user.email}
                 `;
-            } else {
-                iconContainer.innerHTML = `<i class="material-icons">person</i>`;
+                sidebar_userIcon.onclick = null;
+            }
+
+            if (userIcon) {
+                userIcon.innerHTML = `
+                    <img src="${user.photoURL}" alt="Profile Picture"
+                        style="width: 32px; height: 32px; border-radius: 50%;">
+                `;
+            }
+        } else {
+            if (sidebar_userIcon) {
+                sidebar_userIcon.innerHTML = `<i class="material-icons">person</i>Sign-in`;
+                sidebar_userIcon.onclick = fb_authenticator;
+            }
+            if (userIcon) {
+                userIcon.innerHTML = `<i class="material-icons">person</i>`;
             }
         }
+    });
+
+    // -------------------------------
+    //  Cart Count Handling
+    // -------------------------------
+    let cartCount = 0;
+    const cartCountDesktop = document.getElementById("cart-count");
+    const cartCountMobile = document.getElementById("cart-count-mobile");
+
+    const addToCartButtons = document.querySelectorAll(".btn-add-cart");
+
+    function updateCartCount() {
+        cartCountDesktop.textContent = cartCount;
+        cartCountMobile.textContent = cartCount;
+
+        if (cartCount > 0) {
+            cartCountDesktop.style.display = "inline";
+            cartCountMobile.style.display = "inline";
+        }
+    }
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            cartCount++;
+            updateCartCount();
+        });
     });
 });
 
 
+// -------------------------------
+//  Pop-ups
+// -------------------------------
 function showSideBar() {
     document.getElementById("sidebar").classList.toggle("active");
 }
@@ -65,46 +115,60 @@ function close_cart() {
 function croissant_ref_popup() {
     document.getElementById('croissant-popup').style.display = 'flex';
 }
+
 function icedLatte_ref_popup() {
     document.getElementById('icedLatte-popup').style.display = 'flex';
 }
+
 function avocado_ref_popup() {
     document.getElementById('avocado-popup').style.display = 'flex';
 }
+
 function macchiato_ref_popup() {
     document.getElementById('macchiato-popup').style.display = 'flex';
 }
+
 function mocha_ref_popup() {
     document.getElementById('mocha-popup').style.display = 'flex';
 }
+
 function latte_ref_popup() {
     document.getElementById('latte-popup').style.display = 'flex';
 }
+
 function capuccino_ref_popup() {
     document.getElementById('capuccino-popup').style.display = 'flex';
 }
+
 function espresso_ref_popup() {
     document.getElementById('espresso-popup').style.display = 'flex';
 }
+
 /* ======== Gallery ======== */
 function img1_ref_popup() {
     document.getElementById('gallery-1').style.display = 'flex';
 }
+
 function img2_ref_popup() {
     document.getElementById('gallery-2').style.display = 'flex';
 }
+
 function img3_ref_popup() {
     document.getElementById('gallery-3').style.display = 'flex';
 }
+
 function img4_ref_popup() {
     document.getElementById('gallery-4').style.display = 'flex';
 }
+
 function img5_ref_popup() {
     document.getElementById('gallery-5').style.display = 'flex';
 }
+
 function img6_ref_popup() {
     document.getElementById('gallery-6').style.display = 'flex';
 }
+
 function img7_ref_popup() {
     document.getElementById('gallery-7').style.display = 'flex';
 }
@@ -122,6 +186,7 @@ document.addEventListener('keydown', function(e) {
         });
     }
 });
+
 /* ==================================================
 ==================================================== */
 
@@ -141,7 +206,6 @@ function fb_write() {
 
     fb_login(name, number, email, mentor)
 }
-
 
 function fb_login(name, number, email, mentor) {
     console.log("fb_login function is working...")
@@ -185,12 +249,20 @@ function fb_saveRegistrationInfo(user, name, number, email, mentor) {
     console.log(data);
 
     firebase.database().ref('users/' + uid).set(data)
-    .then(
-        function(){
-            home_page();
-        });
-}
+    .then(function(){
+        const sidebar_userIcon = document.getElementById("sidebar-userIcon");
+        sidebar_userIcon.innerHTML = `
+            <img src="${user.photoURL}" 
+                alt="User" 
+                style="width:24px; height:24px; border-radius:50%; vertical-align:middle; margin-right:6px;">
+            ${user.email}
+        `;
 
+        sidebar_userIcon.onclick = null;
+
+        home_page();
+    });
+}
 
 function fb_application_val() {
     console.log("fb_application_val() working...")
@@ -240,29 +312,3 @@ function fb_saveApplicationInfo(user, name, email, interest, availability) {
         alert("Error: " + error.message);
     });
 }
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    let cartCount = 0;
-    const cartCountDesktop = document.getElementById("cart-count");
-    const cartCountMobile = document.getElementById("cart-count-mobile");
-
-    const addToCartButtons = document.querySelectorAll(".btn-add-cart");
-
-    function updateCartCount() {
-        cartCountDesktop.textContent = cartCount;
-        cartCountMobile.textContent = cartCount;
-
-        if (cartCount > 0) {
-        cartCountDesktop.style.display = "inline";
-        cartCountMobile.style.display = "inline";
-        }
-    }
-
-    addToCartButtons.forEach(button => {
-        button.addEventListener("click", () => {
-        cartCount++;
-        updateCartCount();
-        });
-    });
-});
