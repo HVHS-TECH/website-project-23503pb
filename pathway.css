@@ -415,7 +415,8 @@ header p {
     border: none;
     border-radius: 5px;
     background-color: #ff9800;
-    color: white;
+    color: black;
+    font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
 }
@@ -690,14 +691,6 @@ header p {
         padding: 1.2rem;
     }
 }
-
-
-
-
-
-
-
-
 
 
 
