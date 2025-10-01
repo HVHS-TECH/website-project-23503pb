@@ -95,15 +95,17 @@ function home_page() {
 }
 
 function fb_authenticator() {
+    console.log("fb_authenticator() working...")
     document.getElementById('registrationPopup').style.display = 'flex';
 }
 
 function closePopup() {
+    console.log("Closing Popup")
     document.getElementById('registrationPopup').style.display = 'none';
 }
 
 function showCartDetails() {
-    console.log("clicked")
+    console.log("showCartDetails() working...")
     document.getElementById('shopping-cart').style.display = 'flex';
 }
 

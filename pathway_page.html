@@ -8,9 +8,9 @@
     <link href="pathway.css" rel="stylesheet" type="text/css" />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="Images/Emoji Favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Images/Emoji Favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Images/Emoji Favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/Favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/Favicon/favicon-16x16.png">
 
     <!-- Firebase start ****************************************-->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
@@ -140,22 +140,22 @@
 
                     <form id="application-form" onsubmit="fb_application_val(); return false;">
                         <div>
-                            <label for="name">Full Name</label>
+                            <label for="application-name">Full Name</label>
                             <input type="text" id="application-name" placeholder="Enter your full name" required>
                         </div>
 
                         <div>
-                            <label for="email">School Email</label>
+                            <label for="application-email">School Email</label>
                             <input type="email" id="application-email" placeholder="example@hvhs.school.nz" required>
                         </div>
 
                         <div>
-                            <label for="interest">Why do you want to join?</label>
+                            <label for="application-interest">Why do you want to join?</label>
                             <textarea id="application-interest" placeholder="Tell us why you want to learn barista skills..." required></textarea>
                         </div>
 
                         <div>
-                            <label for="availability">Availability</label>
+                            <label for="application-availability">Availability</label>
                             <select id="application-availability" required>
                             <option value="">Choose your availability</option>
                             <option value="morning">Morning Tea</option>
@@ -165,28 +165,9 @@
 
                         <button type="submit">Submit Application</button>
                     </form>
+                </section>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <!-- Registration Popup -->
         <div class="popup" id="registrationPopup">
@@ -296,9 +277,9 @@
                 <img src="Images/Logo.png" alt="Logo">
             </div>
             <div class="socials">
-                <a href="#"><img src="Images/SNS icons/instagram.png" alt="Facebook"></a>
-                <a href="#"><img src="Images/SNS icons/facebook.png" alt="Twitter"></a>
-                <a href="#"><img src="Images/SNS icons/tiktok.png" alt="Instagram"></a>
+                <a href="#"><img src="Images/SNS/instagram.png" alt="Facebook"></a>
+                <a href="#"><img src="Images/SNS/facebook.png" alt="Twitter"></a>
+                <a href="#"><img src="Images/SNS/tiktok.png" alt="Instagram"></a>
             </div>
         </div>
 
@@ -330,7 +311,8 @@
             <div class="KeepUpdated">
                 <h3>Keep Updated</h3>
                 <form class="subscribe-form">
-                    <input type="email" placeholder="Enter your email" required>
+                    <label for="sub-email"></label>
+                    <input type="email" id="sub-email" placeholder="Enter your email" required>
                     <button type="submit">Submit</button>
                 </form>
             </div>

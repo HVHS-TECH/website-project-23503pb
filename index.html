@@ -8,9 +8,9 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="Images/Emoji Favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Images/Emoji Favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Images/Emoji Favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/Favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/Favicon/favicon-16x16.png">
 
     <!-- Firebase start ****************************************-->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
@@ -50,13 +50,13 @@
                     <i class="material-icons">search</i>
                 </div>
 
-                <div id="cart">
-                    <i class="material-icons" onclick="showCartDetails()">shopping_cart</i>
+                <div id="cart"  onclick="showCartDetails()">
+                    <i class="material-icons">shopping_cart</i>
                     <span id="cart-count">0</span>
                 </div>
 
-                <div id="userIcon">
-                    <i class="material-icons" onclick="fb_authenticator()">person</i>
+                <div id="userIcon" onclick="fb_authenticator()" style="cursor: pointer;">
+                    <i class="material-icons">person</i>
                 </div>
             </div>
         </div>
@@ -68,7 +68,9 @@
                     <span id="cart-count-mobile">0</span>
                 </li>
                 
-                <li><i class="material-icons" onclick="showSideBar()">density_medium</i></li>
+                <li>
+                    <i class="material-icons" onclick="showSideBar()">density_medium</i>
+                </li>
             </ul>
         </div>
 
@@ -127,7 +129,7 @@
             <div class="container">
                 <div class="menu-header">
                     <h4>Featured</h4>
-                    <h1>Special Offers</h1>
+                    <h2>Special Offers</h2>
                     <p>Discover Delicious - Explore Our Menu</p>
                 </div>
 
@@ -239,7 +241,7 @@
                 </div>
 
                 <div class="gallery-header">
-                    <h1>Gallery</h1>
+                    <h2>Gallery</h2>
                     <p>Sip, Savor, and Snap - An Experience in Every Frame</p>
                 </div>
             </div>
@@ -283,16 +285,16 @@
             <div class="popup-form">
                 <h2>Sign Up</h2>
                 <form onsubmit="fb_write(); return false;">
-                    <label>Full Name:</label>
+                    <label for="name">Full Name:</label>
                     <input type="text" id="name" required />
 
                     <label>Phone Number:</label>
                     <input type="tel" id="phone-number" required />
 
-                    <label>Email:</label>
+                    <label for="email">Email:</label>
                     <input type="email" id="email" />
 
-                    <label>Class Mentor:</label>
+                    <label for="class-mentor" >Class Mentor:</label>
                     <input type="text" id="class-mentor" required />
 
                     <div class="form-actions">
@@ -532,13 +534,13 @@
             </div>
             <div class="socials">
                 <a href="https://www.instagram.com/jailcell_coffeehouse/" target="_blank">
-                    <img src="Images/SNS icons/instagram.png" alt="Instagram">
+                    <img src="Images/SNS/instagram.png" alt="Instagram">
                 </a>
                 <a href="https://www.facebook.com/hvhs.school.nz/" target="_blank">
-                    <img src="Images/SNS icons/facebook.png" alt="Facebook">
+                    <img src="Images/SNS/facebook.png" alt="Facebook">
                 </a>
                 <a href="https://www.tiktok.com/@hvhscoffeehouse?is_from_webapp=1&sender_device=pc" target="_blank">
-                    <img src="Images/SNS icons/tiktok.png" alt="Tiktok">
+                    <img src="Images/SNS/tiktok.png" alt="Tiktok">
                 </a>
             </div>
         </div>
@@ -571,7 +573,8 @@
             <div class="KeepUpdated">
                 <h3>Keep Updated</h3>
                 <form class="subscribe-form">
-                    <input type="email" placeholder="Enter your email" required>
+                    <label for="sub-email"></label>
+                    <input type="email" id="sub-email" placeholder="Enter your email" required>
                     <button type="submit">Submit</button>
                 </form>
             </div>
