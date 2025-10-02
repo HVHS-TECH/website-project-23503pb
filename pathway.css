@@ -50,7 +50,7 @@ header p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.career-info h2{
+.career-info h2 {
     text-align: center;
 }
 
@@ -63,15 +63,18 @@ header p {
 .form {
     display: flex;
 }
+
 .career-section {
     background-color: #f9f3e2;
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .career-section h2 {
     text-align: center;
 }
+
 .career-section p {
     text-align: center;
     font-size: 1.2rem;
@@ -82,10 +85,12 @@ header p {
     display: grid;
     gap: .8rem;
 }
+
 .career-section label {
     display: block;
     font-weight: 600;
 }
+
 .career-section input,
 .career-section select,
 .career-section textarea {
@@ -97,6 +102,7 @@ header p {
     transition: 0.2s;
     box-sizing: border-box;
 }
+
 /* Button */
 .career-section button {
     background: #6f4e37;
@@ -541,6 +547,12 @@ header p {
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
+    transition: transform .8s;
+}
+
+.cart-footer button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.15);
 }
 
 .cart-items {
@@ -622,24 +634,6 @@ header p {
     color: #e19132;
 }
 
-.sidebar-btns li:hover {
-    background-color: #e19132;
-}
-
-.btn-primary:hover {
-    background-color: #c9741e;
-}
-
-.btn-add-cart:hover {
-    background-color: #c9741e;
-}
-
-.menu-item:hover,
-.gallery-item:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
-}
-
 
 /* =========== Media Queries =========== */
 /* ===== Tablet ===== */
@@ -671,6 +665,7 @@ header p {
 
 /* ===== Phone ===== */
 @media (max-width: 500px) {
+
     /* -- footer -- */
     .footer {
         grid-template-columns: 1fr;
