@@ -1005,15 +1005,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
 /* Modal styling */
 .modal {
     display: none;
@@ -1040,4 +1031,22 @@ body {
     cursor: pointer;
     font-size: 30px;
     font-weight: bold;
+}
+
+.modal-wrap {
+    border-top: #000;
+    border-top: dotted;
+    padding: 20px 0;
+}
+
+#orderCode {
+    font-size: large;
+    background-color: #e19132;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#modal-desc {
+    padding-bottom: 10px;
 }
