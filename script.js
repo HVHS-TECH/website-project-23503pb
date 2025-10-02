@@ -295,3 +295,27 @@ function fb_saveApplicationInfo(user, name, email, interest, availability) {
         alert("Error: " + error.message);
     });
 }
+
+
+// -------------------------------
+//  Checkout Pop-up modal 
+// -------------------------------
+function func_checkout() {
+    console.log("func_checkout() working...");
+
+    // Generate random order code (e.g. 3-digit number)
+    let orderCode = "ORDER No.- " + Math.floor(100 + Math.random() * 900);
+
+    // Insert the order code into popup
+    document.getElementById("orderCode").innerText = orderCode;
+
+    // Show modal
+    document.getElementById("checkoutModal").style.display = "block";
+}
+
+function close_checkout() {
+    console.log("closing checkout pop-up...")
+
+    // closes modal
+    document.getElementById("checkoutModal").style.display = "none";
+}

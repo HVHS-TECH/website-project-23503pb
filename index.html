@@ -144,7 +144,7 @@
                         <div class="menu-item-desc">A buttery, flaky pastry with a crisp crust and soft, airy layers
                             inside.</div>
                         <div class="menu-item-footer">
-                            <p class="item-price">$0.00</p>
+                            <p class="item-price">$5.50</p>
                             <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                         <div class="menu-item-desc">A chilled espresso drink with creamy milk and sweet vanilla
                             syrup.</div>
                         <div class="menu-item-footer">
-                            <p class="item-price">$0.00</p>
+                            <p class="item-price">$7.50</p>
                             <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
@@ -170,7 +170,7 @@
                         <div class="menu-item-desc">Toasted bread topped with creamy smashed avocado and light
                             seasoning.</div>
                         <div class="menu-item-footer">
-                            <p class="item-price">$0.00</p>
+                            <p class="item-price">$6.50</p>
                             <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
                         <div class="menu-item-name">Macchiato</div>
                         <div class="menu-item-desc">A shot of espresso with a dollop of foamed milk on top.</div>
                         <div class="menu-item-footer">
-                            <p class="item-price">$0.00</p>
+                            <p class="item-price">$7.00</p>
                             <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
@@ -195,7 +195,7 @@
                         <div class="menu-item-desc">Experience the delightful blend of espresso, chocolate, and
                             steamed milk.</div>
                         <div class="menu-item-footer">
-                            <p class="item-price">$0.00</p>
+                            <p class="item-price">$7.00</p>
                             <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
@@ -208,7 +208,7 @@
                         <div class="menu-item-desc">Enjoy the smooth and creamy combination of espresso and steamed
                             milk.</div>
                         <div class="menu-item-footer">
-                            <p class="item-price">$0.00</p>
+                            <p class="item-price">$7.00</p>
                             <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
@@ -221,7 +221,7 @@
                         <div class="menu-item-desc">Indulge in the perfect balance of espresso, steamed milk, and a
                             velvety layer of foam.</div>
                         <div class="menu-item-footer">
-                            <p class="item-price">$0.00</p>
+                            <p class="item-price">$7.50</p>
                             <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
@@ -234,7 +234,7 @@
                         <div class="menu-item-desc">A classic and intense coffee experience. Savor the rich flavors
                             of our perfectly brewed espresso.</div>
                         <div class="menu-item-footer">
-                            <p class="item-price">$0.00</p>
+                            <p class="item-price">$7.00</p>
                             <p class="btn-add-cart">Add to cart</p>
                         </div>
                     </div>
@@ -328,7 +328,7 @@
                                 <button class="qty-btn plus">+</button>
                             </div>
                         </div>
-                        <div class="cart-item-price">$10.00</div>
+                        <div class="cart-item-price">$7.00</div>
                     </div>
                     <!-- item 2 -->
                     <div class="cart-item">
@@ -341,20 +341,20 @@
                                 <button class="qty-btn plus">+</button>
                             </div>
                         </div>
-                        <div class="cart-item-price">$10.00</div>
+                        <div class="cart-item-price">$5.50</div>
                     </div>
                     <!-- item 3 -->
                     <div class="cart-item">
                         <img src="Images/Menu/AvocadoToast.jpg" alt="Avocado Toast">
                         <div class="cart-item-details">
-                            <h3>Latte</h3>
+                            <h3>Avocado Toast</h3>
                             <div class="quantity-control">
                                 <button class="qty-btn minus">-</button>
                                 <input type="number" value="1" min="1">
                                 <button class="qty-btn plus">+</button>
                             </div>
                         </div>
-                        <div class="cart-item-price">$10.00</div>
+                        <div class="cart-item-price">$6.50</div>
                     </div>
                     <!-- item 4 -->
                     <div class="cart-item">
@@ -367,14 +367,24 @@
                                 <button class="qty-btn plus">+</button>
                             </div>
                         </div>
-                        <div class="cart-item-price">$10.00</div>
+                        <div class="cart-item-price">$7.00</div>
                     </div>
                     
                 </div>
 
                 <div class="cart-footer">
-                    <h2>Total: $100.00</h2>
-                    <button>Checkout</button>
+                    <h2>Total: $26.00</h2>
+                    <button onclick="func_checkout()">Checkout</button>
+                </div>
+            </div>
+
+            <!-- Hidden modal -->
+            <div id="checkoutModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="close_checkout()">&times;</span>
+                    <h2>Checkout Successful</h2>
+                    <p>Thank you for your purchase! Your order has been placed.</p>
+                    <p><strong>Order Code:</strong> <span id="orderCode"></span></p>
                 </div>
             </div>
         </div>

@@ -67,7 +67,7 @@ body {
     background-color: #fff;
     overflow: hidden;
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 998;
 }
 
 .nav-links ul {
@@ -191,7 +191,7 @@ body {
     background-color: rgba(255, 255, 255, 0.575);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+    z-index: 998;
 }
 
 .sidebar.active {
@@ -270,7 +270,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 999;
+    z-index: 998;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
 }
@@ -351,6 +351,7 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
+
 .cart-header {
     display: flex;
     justify-content: space-between;
@@ -359,16 +360,19 @@ body {
     margin-bottom: 15px;
     border-bottom: 2px solid #eee;
 }
+
 .cart-header h1 {
     font-size: 1.5rem;
     margin: 0;
 }
+
 .cart-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 2px solid #eee;
 }
+
 .cart-footer button {
     background-color: #e19132;
     border: none;
@@ -376,6 +380,12 @@ body {
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
+    transition: transform .8s;
+}
+
+.cart-footer button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.15);
 }
 
 .cart-items {
@@ -450,8 +460,9 @@ body {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
-    z-index: 999;
+    z-index: 998;
 }
+
 .menu-popup-content {
     display: flex;
     flex-direction: column;
@@ -467,10 +478,12 @@ body {
     width: 600px;
     max-width: 90%;
 }
+
 .left p {
     font-size: .8rem;
 }
-.gallery-popup-content{
+
+.gallery-popup-content {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -485,17 +498,20 @@ body {
     width: 600px;
     max-width: 90%;
 }
+
 .gallery-img-container {
     height: 400px;
     width: auto;
     overflow: hidden;
 }
-.gallery-img-container img{
+
+.gallery-img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top; 
+    object-position: top;
 }
+
 /* =========== Hero Section =========== */
 /* ===== Hero Section ===== */
 .hero {
@@ -637,7 +653,8 @@ body {
     margin: 50px 0;
 }
 
-.gallery-header p, .menu-header p {
+.gallery-header p,
+.menu-header p {
     font-size: 1.1rem;
 }
 
@@ -706,6 +723,7 @@ body {
     background-color: #222;
     padding: 1rem;
 }
+
 .footer-col {
     display: flex;
     flex-direction: column;
@@ -715,43 +733,52 @@ body {
 }
 
 /* -- footer column 1 -- */
-.column-1{
+.column-1 {
     display: flex;
     background-color: rgb(172, 172, 172);
     border-radius: 10px;
 }
+
 .footer-logo {
     display: flex;
     justify-content: center;
 }
+
 .footer-logo img {
     width: 200px;
 }
+
 .socials {
     display: flex;
     justify-content: center;
 }
+
 .socials img {
     width: 35px;
     margin-right: 10px;
     transition: transform 0.3s;
 }
+
 .footer .socials a img:hover {
     transform: scale(1.2);
 }
 
 /* -- footer column 2 -- */
-.column-2, .column-3 {
+.column-2,
+.column-3 {
     padding: 0 10px;
 }
+
 .yipyip {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.footer-col{
+
+.footer-col {
     color: white;
 }
+
 .footer-col p {
     font-size: 1em;
 }
@@ -761,9 +788,9 @@ body {
     display: flex;
     padding-bottom: 1.2rem;
     gap: 0.5rem;
-} 
+}
 
-.subscribe-form input{
+.subscribe-form input {
     padding: 0.5rem;
     border: none;
     border-radius: 5px;
@@ -912,6 +939,7 @@ body {
 
 /* ===== Phone ===== */
 @media (max-width: 500px) {
+
     /* Hero text scaling */
     .hero {
         padding: 1.5rem;
@@ -960,9 +988,10 @@ body {
         grid-area: 7 / 1 / 7 / 1;
     }
 
-    .gallery-grid{
+    .gallery-grid {
         padding: 20px;
     }
+
     .menu-grid {
         padding: 30px;
     }
@@ -974,3 +1003,41 @@ body {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+}
