@@ -520,7 +520,7 @@ body {
     align-items: center;
     height: 600px;
     background: url("Images/Hero_BannerV2_compressed.jpg") no-repeat center center / cover;
-    z-index: 998;
+    z-index: 997;
 }
 
 .hero-content {
