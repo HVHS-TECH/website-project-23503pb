@@ -342,7 +342,7 @@ body {
     top: 50%;
     left: 50%;
     max-width: 700px;
-    width: 90%;
+    width: 600px;
     max-height: 60vh;
     padding: 20px;
     transform: translate(-50%, -50%);
@@ -996,6 +996,19 @@ body {
         padding: 30px;
     }
 
+    /* -- Reference/Pop-ups -- */
+
+    .popup-form,
+    .menu-popup-content,
+    .gallery-popup-content,
+    .modal-content {
+        width: 80%;
+    }
+
+    .cart-content {
+        width: 85%;
+    }
+
     /* -- footer -- */
     .footer {
         grid-template-columns: 1fr;
@@ -1019,18 +1032,23 @@ body {
 
 .modal-content {
     background: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    width: 400px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
     border-radius: 10px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    max-width: 700px;
+    width: 90%;
 }
 
-.close {
-    float: right;
+.modal-close {
     cursor: pointer;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 40px;
+    font-weight: 900;
 }
 
 .modal-wrap {
@@ -1048,5 +1066,14 @@ body {
 }
 
 #modal-desc {
-    padding-bottom: 10px;
+    padding: 0 50px;
+    text-align: center;
+
+}
+
+.modal-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
 }

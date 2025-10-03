@@ -381,8 +381,10 @@
             <!-- Hidden modal -->
             <div id="checkoutModal" class="modal">
                 <div class="modal-content">
-                    <span class="close" onclick="close_checkout()">&times;</span>
-                    <h2>Checkout Successful</h2>
+                    <div class="modal-container">
+                        <h2>Checkout Successful</h2>
+                        <span class="modal-close" onclick="close_checkout()">&times;</span>
+                    </div>
                     <p id="modal-desc">Thank you for your purchase! Your order has been placed.</p>
                     <div class="modal-wrap">
                         <p><strong>Order Code:</strong> <span id="orderCode"></span></p>
